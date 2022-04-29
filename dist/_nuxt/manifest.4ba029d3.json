@@ -1,0 +1,14 @@
+{
+  "name": "Takumi Isobe - Creative Space",
+  "short_name": "Takumi Isobe",
+  "description": "ディレクター・デザイナー・デベロッパーである磯部拓のクリエイティブスペース - takumiisobeです。主な業務内容としてはUIデザイン・グラフィックデザイン・モーショングラフィックス・WEBサイト構築・撮影、と視覚領域のブランド構築などを行なっています。",
+  "icons": [],
+  "start_url": "/?standalone=true",
+  "display": "standalone",
+  "background_color": "#E2E2E2",
+  "theme_color": "#3E1515",
+  "lang": "ja",
+  "title": "Takumi Isobe - Creative Space",
+  "og:title": "Takumi Isobe - Creative Space",
+  "og:description": "ディレクター・デザイナー・デベロッパーである磯部拓のクリエイティブスペース - takumiisobeです。主な業務内容としてはUIデザイン・グラフィックデザイン・モーショングラフィックス・WEBサイト構築・撮影、と視覚領域のブランド構築などを行なっています。"
+}
