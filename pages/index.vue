@@ -55,7 +55,7 @@
 </template>
 
 <script>
-//import axios from 'axios'
+import axios from 'axios'
 import luxy from 'luxy.js'
 export default {
     head: {
