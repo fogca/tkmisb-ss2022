@@ -1,5 +1,5 @@
 <template>
-<section>
+<div>
   <header 
   :class="{
     'is-active': isActiveMenu, 
@@ -8,9 +8,23 @@
   >
     <nuxt-link to="/" aria-label="Home"><Logo /></nuxt-link>
     
-    <div>
-      <nuxt-link to="/contact"><h2 lang="en">Contact</h2></nuxt-link>
-    </div>
+    <ul>
+      <li><a lang="en" class="h3" href="#index-projects">
+        projects<div lang="jp">これまでのプロジェクト</div>
+      </a></li>
+      <li><a lang="en" class="h3" href="#index-about">
+        about me<div lang="jp">磯部たくみについて</div>
+      </a></li>
+      <li><a lang="en" class="h3" href="#index-inhouse">
+        in house<div lang="jp">お酒とハーブのコト</div>
+      </a></li>
+      <li><a lang="en" class="h3" href="#index-contact">
+        contact<div lang="jp">お問い合わせ</div>
+      </a></li>
+      <li><a lang="en" class="h3" href="#index-instagram">
+        instgram<div lang="jp">日々のコト</div>
+      </a></li>
+    </ul>
     <!--
     <button
       type="button"
@@ -28,7 +42,7 @@
     <Menu v-on:click.native="isActiveMenu = false" />
   </nav>
 
-</section>
+</div>
 </template>
 
 <script>
@@ -72,31 +86,31 @@ export default {
 <style>
 
 header.is-top {
-  padding-top: 4.5rem;
+  padding-top: 7.5rem;
   background: transparent;
   backdrop-filter: none;
 }
 
 header {
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    transition: 1s ease-in-out;
-    z-index: 999;
-
-
-  padding: 0.25rem 7vw;
-  background-color: var(--backgroundColor);
+  position: fixed;
+  top: 0;
+  transition: 1s ease-in-out;
+  z-index: 999;
+  padding: 6.5rem 5vw 0;
+  padding-top: 7.5rem;
 }
+
+header ul {margin-top: 15rem;}
+header ul li a {
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;}
+header ul li div {opacity: .5;font-size: 1.2rem;}
 
 
 header #Path_1603 {opacity: 0;}
 header.is-top #Path_1603 {opacity: 1;}
 
-header.scrolled {transform: translateY(-7.5rem);}
+header.scrolled {transform: translateY(0);}
 
 
 header .Logo {
@@ -171,8 +185,6 @@ header.is-active * {fill: var(--textColor);}
 
 
 @media screen and (min-width: 720px) {
-  header {padding: 1rem 5vw;}
-  header.scrolled {padding: 1.8rem 5vw;}
 
   header .Logo {width: 12rem;}
 
@@ -182,13 +194,9 @@ header.is-active * {fill: var(--textColor);}
   header {
     margin: auto;
     max-width: 1800px;
-    padding: 5rem 0;
-    width: 85%;
-    left: 50%;
-    transform: translateX(-50%);
   }
   header.scrolled {
-    transform: translate(-50%, -7.5rem);
+    transform: translate(0);
   }
 }
 </style>

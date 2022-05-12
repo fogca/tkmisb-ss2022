@@ -35,20 +35,19 @@ html, body {
 }
 
 
-/*font-family:  "Astro", 'TazuganeRegular', TazuganeGothicStdN-Regular, TazuganeGothicStdN-Medium, sans-serif;*/
 div, h1, h2, h3, h4, h5, h6, p, a, span, button {
-    font-family: atten-new, FP-こぶりなゴシック StdN, FP-KoburinaGoStdN-W6, FOT-筑紫ゴシック, TsukuGoPr5-D, FP-KoburinaGoStdN-W6, sans-serif;
-    font-weight: 500;
+    font-family: neue-haas-grotesk-display, TazuganeGothicStdN-Medium, sans-serif;
+    font-weight: 600;
     color: var(--textColor);
     font-display: swap;
     font-feature-settings: "palt";
     letter-spacing: .075em;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.5;
+    line-height: 1.8;
 }
 
 :lang(en) {
-    letter-spacing: .005em;
+    letter-spacing: -.03em;
     line-height: 1.4;
     -webkit-font-smoothing: antialiased;
 }
@@ -61,8 +60,10 @@ h3, .h3 {font-size: 1.8rem;}
 h4, .h4 {font-size: 1.6rem;}
 h5, .h5 {font-size: 1.4rem;}
 h6, .h6 {font-size: 1.2rem;}
+.heading {font-weight: 700;}
 
 p, .p {
+    font-weight: 600;
     line-height: 1.85;
     font-size: 1.35rem;
     letter-spacing: 0.025em;
@@ -78,7 +79,12 @@ a {
     transition: .75s ease-in-out;
 }
 a:hover {opacity: .85;}
-img {object-fit: cover;}
+img {
+    object-fit: cover;
+    object-position: 50%;
+}
+
+
 
 
 .uppercase {
@@ -90,14 +96,13 @@ img {object-fit: cover;}
 .semitrans {opacity: .7;}
 .white {color: var(--bodyColor);}
 .gray {color: var(--subColor);}
-
+ul li {text-decoration: none;list-style: none;}
 .flex {display: flex; justify-content: center; align-items: center;}
 
 .wfull {width: 100%;}
 
 
 main {
-    width: 85%;
     margin: auto;
   }
 
@@ -125,6 +130,7 @@ main {
     h4, .h4 {font-size: 2.0rem;}
     h5, .h5 {font-size: 1.6rem;}
     h6, .h6 {font-size: 1.4rem;}
+    .h7 {font-size: 1.2rem;}
 p, .p {
     font-size: 1.6rem;
     text-align: left;
@@ -132,10 +138,6 @@ p, .p {
 .sp {display: none;}
 .pc {display: block;}
 
-main {
-    width: 75%;
-    margin: auto;
-  }
 }
 
 

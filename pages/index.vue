@@ -1,32 +1,38 @@
 <template>
-  <main>
+  <main id="luxy"> 
+
     
+    <div class="section-wrapper luxy-el">
     <section id="index-top">
+      <div class="section-header">
+        <small class="h6">業務内容</small>
+        <h1 lang="en" class="heading luxy-el">art direction</h1>
+        <h2 lang="en" class="h4">Design / Web development / Photography</h2>
+      </div>
       <div class="wrapper">
-          <div>
-              <h1 lang="en" class="h3">Takumi Isobe is an art director, mostly develop compelling brand identity using the most sophisticated ideas and presentation techniques available today. Feel free to get in touch with me.</h1>
-              <p>視覚表現はあくまでも、ブランド・プロダクトに寄り添うものであり、本質を汲み取り、対話し、その延長線上で行われるべきであると考えます。そして落とし込む。この落とし込みのプロセスは多々、”創造する”や”変換する”といった言葉で説明されますが、”落とし込む”が最適のように感じます。汲み取り、対話して得たものを抽出して、そのままの感覚を視覚領域に広げていく。</p>
-          </div>
-          <h2 class="h4 uppercase">Sake place - kanro</h2>
+        <p class="h5">多種多様なブランドのパートナーとして、適切なマーケットアプローチを通し、アート・テクニカルディレクションを実施し、ブランドの価値を最大限に高めます。ブランドの伝わる化を一つの課題とし、ビジュアル・テクノロジーを通し、魅せるだけで終わらない、受け手に伝わるブランドの構築を行なっていきます。ビジュアル領域における制作のご相談は、お気軽にお問い合わせください。</p>
+        <p lang="en" class="h5">As a partner of a wide variety of brands, we will carry out art and technical direction through an appropriate market approach to maximise the core value of the brand. Through visual technology, I will build a brand that can be conveyed to the recipients, not just fascinating. Feel free to contact us for visual development.</p>
       </div>
-      <div class="box">
-          <ul>
-              <li><a href="" class="h1 uppercase" id="myText">Visual Direction</a></li>
-              <li><a href="" class="h1 uppercase">Graphic design</a></li>
-              <li><a href="" class="h1 uppercase">Photography</a></li>
-              <li><a href="" class="h1 uppercase">Web development</a></li>
-          </ul>
+      <div class="wrapper">
+        <h3 class="h5">
+          <div>- ブランドデザインの構築<br>- ブランドコンテンツの企画・制作<br>- UI / グラフィックデザインの開発<br></div>
+          <div>- モダンフロント開発<br>- デジタル施策の企画<br>- メインビジュアルの撮影</div>
+        </h3>
+        <div class="cookie-consent">
+          <div class="cookie-text h7"><span lang="en" class="h5">This website uses Cookie</span><br>当サイトではCookieを使用します。Cookieの使用に<br>関する詳細は「<a href="#privacy-policy">プライバシーポリシー</a>」をご覧ください。</div>
+          <div class="cookie-agree">OK</div>
+        </div>
       </div>
+      
     </section>
 
-    <section id="i2">
-      <div class="top">
-        <h1 class="back">これまでのプロジェクト</h1>
-        <h2 lang="en" class="h4 marquee">Work Archives - UI Design / Graphic Design / Web Development / Photography, all done by takumiisobe - Creative Director &nbsp; Work Archives - UI Design / Graphic Design / Web Development / Photography, all done by takumiisobe - Creative Director &nbsp; Work Archives - UI Design / Graphic Design / Web Development / Photography, all done by takumiisobe - Creative Director</h2>
+    <section id="index-projects">
+      <div class="section-header">
+        <small class="h6">これまでのプロジェクト</small>
+        <h1 lang="en" class="heading">projects</h1>
       </div>
 
       <div class="wrapper">
-
         <nuxt-link v-for="content in contents" :key="content.id" :to="`/archives/${content.id}`" class="container" :aria-label="content.title">
           <img v-if="content.thumbnail" :src="content.thumbnail.url" :alt="content.title" class="thumbnail">
           <img v-else src="~@/assets/image/media.webp" alt="" class="thumbnail">
@@ -39,21 +45,18 @@
       </div>
     </section>
 
-    
-
-    <nuxt-link to="/"></nuxt-link>
-    <nuxt-link to="/contact"></nuxt-link>
-    <nuxt-link to="/about"></nuxt-link>
-    <nuxt-link to="/"></nuxt-link>
-    <nuxt-link to="/contact"></nuxt-link>
-    <nuxt-link to="/about"></nuxt-link>
-
+    <section id="index-about"></section>
+    <section id="index-inhouse"></section>
+    <section id="index-contact"></section>
+    <section id="index-instagram"></section>
+    </div>
   </main>
 
 </template>
 
 <script>
 //import axios from 'axios'
+import luxy from 'luxy.js'
 export default {
     head: {
       titleTemplate: null,
@@ -65,6 +68,8 @@ export default {
 
     
     mounted () {
+      luxy.init()
+
       this.$adobeFonts(document)
 
       try{
@@ -72,6 +77,7 @@ export default {
       } catch(e){
         console.log("[error]load FONTPLUS.")
       }
+      
     },
     
     async asyncData({ $microcms }) {
@@ -85,50 +91,92 @@ export default {
 </script>
 
 <style>
-#Index main {width: 90%;}
+  #Index section {
+    padding-left: 21.5%;
+    padding-right: 10%;
+  }
+  #Index #luxy {z-index: 3;}
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;left: 0;
+    z-index: 1;
+    background-attachment: fixed;
+    background-image: url("assets/image/bg@.webp");
+    background-position: top left;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+    
+  #index-top {padding-top: 30vh;}
+  #index-top .wrapper {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  #index-top .wrapper p {width: 47.5%;}
+  #index-top .wrapper p:nth-of-type(1) {font-size: 1.48rem;line-height: 2;}
+  #index-top .wrapper p:nth-of-type(2) {font-size: 1.8rem;line-height: 1.6;}
+  #index-top h3 {margin-top: 1rem;line-height:2;}
+
+  #index-top .cookie-consent {
+    width: 47.5%;
+    padding: 4.5rem 5rem;
+    background: white;
+  }
+  #index-top .cookie-consent * {color: black;}
 
 
-        header {
-            position: fixed;
-            padding: 6.5rem 6vw 0;
-        }
-        header .Logo {font-size: 2rem;}
-    
-        
-    
-    #index-top {
-        width: 100vw;
-        height: 100vh;
-        position: relative;
-        
-    }
-    #index-top .wrapper {
-        position: absolute;
-        top: auto;
-        bottom: 6rem;
-        width: 610px;}
-    
-    #index-top .wrapper h1.h3 {
-        margin-bottom: 1.5rem;
-        word-break: break-all;
-        hyphens: auto;
-        font-size: 3rem;
-        text-align: justify;}
 
-    #index-top .wrapper p {
-        margin-bottom: 10rem;
-        text-align: justify;}
-    
-    #index-top .box {
-        
-        transform-origin: left top;
-        position: absolute;
-        right: 0;
-        top: 6.5rem;
-        transform: rotate(90deg) translateY(-425px);
-        }
+  #index-projects {margin-top: 12.5rem;}
+  #index-projects .wrapper {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-rows: 40vh 40vh 40vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+  #index-projects .wrapper a {
+    position: relative;
+    height: 40vh;}
+  #index-projects .wrapper img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;}
+  #index-projects .box {
+    padding-left: 3rem;
+    padding-bottom: 2.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: .5s .15s ease-in-out;}
+#index-projects .container:hover {opacity: 1;}
+#index-projects .container:hover .box {
+  opacity: 1;
+  transition: .5s ease-in-out;}
+#index-projects .container:hover img {
+  filter: brightness(.75) contrast(1.15);
+  transform: translateY(-50%) scale(1.025);
+}
+  #index-projects a:nth-of-type(2), #i2 a:nth-of-type(4) {pointer-events: none;}
+  #index-projects .container:nth-of-type(1) {grid-row: 1;grid-column: 1/ 3;}
+  #index-projects .container:nth-of-type(4) {grid-row: 2;grid-column: 2/ 4;}
+
+
+  #index-projects .container:nth-of-type(1) h2 {margin-top: 1.5rem;}
+  #index-projects .container:nth-of-type(1) h3 {
+    display: block;
+    font-size: 1.4rem;
+    margin: 0.3rem 0 0.4rem;
+  }
+
    
-    #index-top .box ul li a {font-size: 5.4rem;}
+    
 
 
     @media screen and (max-width: 480px) {
@@ -137,7 +185,6 @@ export default {
             padding: 5rem 7vw 0;}
         header .Logo {font-size: 1.8rem;}
 
-        main {padding: 0 7vw;}
 
         #index-top .wrapper {
             width: 300px;
@@ -162,29 +209,28 @@ export default {
         #index-top .box {display: none;}
     }
 
-#i2 {margin: 1rem 0 7.5rem;}
-#i2 .top {display: none;}
-#i2 h1 {margin-bottom: calc(var(--pX) * 1.5);}
 
-#i2 img {width: calc(100%);}
-#i2 .container {margin-bottom: 2.5rem;}
-#i2 .container img:nth-of-type(2) {margin-top: calc(var(--pX) * -1);}
-#i2 .container h2 {margin-top: 0.5rem;}
-#i2 .container h3 {margin: calc(var(--pX) * 1) 0 calc(var(--pX) * .75);}
-#i2 .container h3 {display: none;}
-#i2 .container h4 {font-size: 1.05rem;}
-#i2 a:nth-of-type(2), #i2 a:nth-of-type(4) {pointer-events: none;}
-#i2 .container:nth-of-type(1) {margin-bottom: 3rem;}
-#i2 .container:nth-of-type(1) img {
-  width: calc(100% + 15vw);
-  margin-left: -7.5vw;
-}
-#i2 .container:nth-of-type(1) h2 {margin-top: 1.5rem;}
-#i2 .container:nth-of-type(1) h3 {
-  display: block;
-  font-size: 1.4rem;
-  margin: 0.3rem 0 0.4rem;
-}
+#index-projects .top {display: none;}
+#index-projects h1 {margin-bottom: calc(var(--pX) * 1.5);}
+#index-projects img {width: calc(100%);}
+
+#index-projects .container h2 {margin-top: 0.5rem;}
+#index-projects .container h3 {margin: calc(var(--pX) * 1) 0 calc(var(--pX) * .75);}
+#index-projects .container h3 {display: none;}
+#index-projects .container h4 {font-size: 1.05rem;}
+#index-projects .container {
+  display: grid;
+  margin-top: 0;
+  overflow: hidden;}
+#index-projects .container .thumbnail, #i2 .container .box {grid-area: 1/-1;}
+#index-projects .container img {transition: .5s ease-in-out;}
+#index-projects .container .box h2, #i2 .container .box * {color: var(--backgroundColor);}
+#index-projects .container .box h2, #i2 .container .box h3 {opacity: 1;}
+#index-projects .container .box h3 {display: block;}
+
+#index-projects .container img {transition: 1s;}
+
+
 
 #i3 {
   display: none;
@@ -221,7 +267,6 @@ export default {
 
 
 @media screen and (min-width: 720px) {
-  #Index main {width: 90%;}
 
   #i1 {
     height: auto;

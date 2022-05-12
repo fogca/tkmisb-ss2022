@@ -3,7 +3,7 @@ export default {
   pageTransition: 'fade',
 
   // Target: https://go.nuxtjs.dev/config-target
-  mode: 'universal',
+  mode: 'spa',
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -53,8 +53,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     //{ src: '~/plugins/axios.js', ssr: false }
-    '~/plugins/adobe-fonts',
-    //'~/plugins/luxy'
+    { src: '~/plugins/adobe-fonts', ssr: false },
+    { src: '~/plugins/luxy', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
