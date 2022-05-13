@@ -1,8 +1,7 @@
 <template>
-  <main id="luxy"> 
-
+  <main id="luxy" ref="scrollWrap"> 
     
-    <div class="section-wrapper luxy-el">
+    <div class="section-wrapper luxy-el" ref="scrollContainer">
     <section id="index-top">
       <div class="section-header">
         <small class="h6">業務内容</small>
@@ -55,8 +54,9 @@
 </template>
 
 <script>
+import Vue from 'vue';     
 import axios from 'axios'
-import luxy from 'luxy.js'
+//import luxy from 'luxy.js'
 export default {
     head: {
       titleTemplate: null,
@@ -68,7 +68,7 @@ export default {
 
     
     mounted () {
-      luxy.init()
+      //luxy.init()
 
       this.$adobeFonts(document)
 
@@ -88,6 +88,7 @@ export default {
     return data;
   }
 }
+
 </script>
 
 <style>
@@ -96,6 +97,7 @@ export default {
     padding-right: 10%;
   }
   #Index #luxy {z-index: 3;}
+  #Index .section-wrapper {position: relative;z-index: 2;}
   .bg {
     width: 100vw;
     height: 100vh;
@@ -107,8 +109,8 @@ export default {
     background-position: top left;
     background-size: 100%;
     background-repeat: no-repeat;
-}
-    
+  }
+
   #index-top {padding-top: 30vh;}
   #index-top .wrapper {
     margin-top: 5rem;
