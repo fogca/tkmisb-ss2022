@@ -3,7 +3,7 @@ export default {
   pageTransition: 'fade',
 
   // Target: https://go.nuxtjs.dev/config-target
-  mode: 'ssr',
+  mode: 'universal',
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
