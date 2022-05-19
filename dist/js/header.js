@@ -1,3 +1,13 @@
+window.addEventListener( "scroll", function() {
+    let cookie = document.querySelector("#cookie");
+    let rect = cookie.getBoundingClientRect();
+    let y = rect.top + window.pageYOffset;
+    if (y > 700) {
+        cookie.classList.add('scrolled');
+    } else {
+        cookie.classList.remove('scrolled');
+    }
+});
 
 
 /*

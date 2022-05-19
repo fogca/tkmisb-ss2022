@@ -9,19 +9,19 @@
     <nuxt-link to="/" aria-label="Home"><Logo /></nuxt-link>
     
     <ul>
-      <li><a lang="en" class="h3" href="#index-projects">
+      <li><a lang="en" class="h3" href="/#index-projects">
         projects<div lang="jp">これまでのプロジェクト</div>
       </a></li>
-      <li><a lang="en" class="h3" href="#index-about">
+      <li><a lang="en" class="h3" href="/#index-about">
         about me<div lang="jp">磯部たくみについて</div>
       </a></li>
-      <li><a lang="en" class="h3" href="#index-inhouse">
+      <li><a lang="en" class="h3" href="/#index-inhouse">
         in house<div lang="jp">お酒とハーブのコト</div>
       </a></li>
-      <li><a lang="en" class="h3" href="#index-contact">
+      <li><a lang="en" class="h3" href="/#index-contact">
         contact<div lang="jp">お問い合わせ</div>
       </a></li>
-      <li><a lang="en" class="h3" href="#index-instagram">
+      <li><a lang="en" class="h3" href="/#index-instagram">
         instgram<div lang="jp">日々のコト</div>
       </a></li>
     </ul>
@@ -182,6 +182,12 @@ header.is-active * {fill: var(--textColor);}
 
 .nav .box {display: none;}
 
+
+@media screen and (max-width: 480px) {
+
+  header ul {display: none;}
+
+}
 
 
 @media screen and (min-width: 720px) {

@@ -39,6 +39,8 @@ export default {
     script: [
       { src: "/js/header.js", body: true },
       //{ src: "//typesquare.com/3/tsst/script/ja/typesquare.js?616abf4f07244993b0057f1eac1e02e5", ssr: false },
+      { src: "//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/gsap.min.js", ssr: false },
+      { src: "//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/ScrollTrigger.min.js", ssr: false },
       { src: "https://webfont.fontplus.jp/accessor/script/fontplus.js?kqbwQX--jVA%3D&box=2bQkUFfZnEc%3D&aa=1&ab=2", ssr: false }
               
     ]

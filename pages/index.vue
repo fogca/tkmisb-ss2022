@@ -17,9 +17,13 @@
           <div>- ブランドデザインの構築<br>- ブランドコンテンツの企画・制作<br>- UI / グラフィックデザインの開発<br></div>
           <div>- モダンフロント開発<br>- デジタル施策の企画<br>- メインビジュアルの撮影</div>
         </h3>
-        <div class="cookie-consent">
-          <div class="cookie-text h7"><span lang="en" class="h5">This website uses Cookie</span><br>当サイトではCookieを使用します。Cookieの使用に<br>関する詳細は「<a href="#privacy-policy">プライバシーポリシー</a>」をご覧ください。</div>
-          <div class="cookie-agree">OK</div>
+        <div id="cookie" class="cookie-consent">
+          <div class="cookie-text h7"><span lang="en" class="h5">This website uses Cookie</span><br>当サイトではCookieを使用します。Cookieの使用に関する詳細は「<a href="#privacy-policy">プライバシーポリシー</a>」をご覧ください。</div>
+          <div>
+            <button lang="en" class="cookie-agree">Accepet</button>
+            <button lang="en" class="cookie-decline">Decline</button>
+          </div>
+          
         </div>
       </div>
       
@@ -33,8 +37,12 @@
 
       <div class="wrapper">
         <nuxt-link v-for="content in contents" :key="content.id" :to="`/archives/${content.id}`" class="container" :aria-label="content.title">
-          <img v-if="content.thumbnail" :src="content.thumbnail.url" :alt="content.title" class="thumbnail">
-          <img v-else src="~@/assets/image/media.webp" alt="" class="thumbnail">
+          
+          <div class="reveal">
+            <img v-if="content.thumbnail" :src="content.thumbnail.url" :alt="content.title" class="thumbnail">
+            <img v-else src="~@/assets/image/media.webp" alt="" class="thumbnail">
+          </div>
+
           <div class="box">
             <h2 lang="en" class="h4">{{ content.title }}</h2>
             <h3 lang="en" class="h4">{{ content.description }}</h3>
@@ -54,21 +62,40 @@
 </template>
 
 <script>
-import Vue from 'vue';     
-import axios from 'axios'
-//import luxy from 'luxy.js'
 export default {
     head: {
       titleTemplate: null,
       title: 'Takumi Isobe - Creative Space',
       bodyAttrs: {
         id: 'Index'
-      }
+      },
+      script: [
+        { src: "/js/animation.js", body: true },
+      ]
     },
 
+    methods: {
+      Animation() {
+        gsap.set(".reveal", { autoAlpha: 0 });
+        gsap.from(".reveal", 1, {
+          xPercent: 0,
+          opacity: 0,
+          scrollTrigger: {
+            trigger: ".reveal",
+          },
+        });
+        gsap.from(".reveal img", 1, {
+          xPercent: 0,
+          scale: 1.25,
+          delay: -3.5,
+          scrollTrigger: {
+            trigger: ".reveal",
+          },
+        });
+      },
+    },
     
     mounted () {
-      //luxy.init()
 
       this.$adobeFonts(document)
 
@@ -77,6 +104,9 @@ export default {
       } catch(e){
         console.log("[error]load FONTPLUS.")
       }
+
+      gsap.registerPlugin(ScrollTrigger);
+      this.Animation();
       
     },
     
@@ -105,13 +135,13 @@ export default {
     top: 0;left: 0;
     z-index: 1;
     background-attachment: fixed;
-    background-image: url("assets/image/bg@.webp");
+    background-image: url("assets/image/bg@.jpg");
     background-position: top left;
     background-size: 100%;
     background-repeat: no-repeat;
   }
 
-  #index-top {padding-top: 30vh;}
+  #index-top {padding-top: 28.25rem;}
   #index-top .wrapper {
     margin-top: 5rem;
     display: flex;
@@ -123,12 +153,27 @@ export default {
   #index-top .wrapper p:nth-of-type(2) {font-size: 1.8rem;line-height: 1.6;}
   #index-top h3 {margin-top: 1rem;line-height:2;}
 
+  
   #index-top .cookie-consent {
-    width: 47.5%;
-    padding: 4.5rem 5rem;
+    width: calc(68.5% * .475);
+    padding: 4.5rem 8rem 4.5rem 5rem;
     background: white;
+    transition: 1s ease-in-out;
+    position: fixed;
+    left: auto;
+    right: 0;
+    margin-right: 10%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
+  #index-top .cookie-text {width: 65%;}
   #index-top .cookie-consent * {color: black;}
+  #index-top .cookie-agree {font-size: 1.8rem;}
+  #index-top .cookie-decline {font-size: 1.4rem;opacity: .5;margin-top: .5rem;}
+  #index-top #cookie.scrolled {opacity: 0;pointer-events: none;}
+  #index-top #cookie button {border: none;background: transparent;display: block;}
 
 
 
@@ -143,11 +188,7 @@ export default {
   #index-projects .wrapper a {
     position: relative;
     height: 40vh;}
-  #index-projects .wrapper img {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 100%;}
+  #index-projects .wrapper img {height: 100%;}
   #index-projects .box {
     padding-left: 3rem;
     padding-bottom: 2.5rem;
@@ -182,33 +223,32 @@ export default {
 
 
     @media screen and (max-width: 480px) {
+
+
+      #Index section {padding: 0 10%;}
+
+      #index-top .wrapper {flex-direction: column;}
+      #index-top .wrapper p {width: 100%;}
+      #index-top .wrapper p:nth-of-type(1) {font-size: 1.3rem;}
+      #index-top .wrapper p:nth-of-type(2) {font-size: 1.4rem;}
+      #index-top #cookie {display: none;}
+
+      .bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;left: 0;
+    z-index: 1;
+    background-attachment: fixed;
+    background-image: url("assets/image/bg_sp.jpg");
+    background-position: top left;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
         header {
             position: fixed;
             padding: 5rem 7vw 0;}
         header .Logo {font-size: 1.8rem;}
-
-
-        #index-top .wrapper {
-            width: 300px;
-            position: initial;
-        }
-        #index-top .wrapper div {
-            width: 300px;
-            position: absolute;
-            top: 18rem;
-        }
-        #index-top .wrapper h1.h3 {
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-        #index-top .wrapper h2 {
-            position: absolute;
-            top: auto;
-            bottom: 4rem;
-        } 
-        #index-top .wrapper p {font-size: 1.05rem;}
-
-        #index-top .box {display: none;}
     }
 
 

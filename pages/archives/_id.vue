@@ -227,6 +227,10 @@ export default {
 
 
 <style>
+
+.Slug main {position: relative;z-index: 3;}
+.Slug section {padding-left: 21.5%;padding-right: 10%;}
+
 .Slug img {width: 100%;}
 
 #s1 .thumbnail {    
