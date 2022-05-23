@@ -4,6 +4,23 @@
 .fade-enter, .fade-leave-to {opacity: 0;}
 
 
+html, body {animation: bgColor 5s ease-in-out;}
+body * {animation: text 5s ease-in-out;}
+
+@keyframes bgColor {
+  0% {background-color: white;}
+  100% {background-color: black;}
+}
+
+@keyframes text {
+  0% {color: black;}
+  100% {color: white;}
+}
+
+
+.heading {font-size: 3.2rem;}
+.orange {color: #E34600;}
+
 #index-projects .wrapper .reveal:nth-of-type(1),
 #index-projects .wrapper .reveal:nth-of-type(2) {
   padding-top: 5rem;
@@ -63,37 +80,6 @@ body .is-menuOpen {
   width: 100%;
 }
 
-.bilingual::before {
-  width: fit-content;
-  display: block;
-  font-size: 1.1rem;
-  background: var(--textColor);
-  color: var(--backgroundColor);
-  letter-spacing: .15em;
-  padding: 0 .15rem;
-}
-.back {
-  background: var(--textColor);
-  color: var(--backgroundColor);
-  width: fit-content;
-  line-height: 1.5;
-  padding: 0 .15rem;
-}
-
-.marquee {
-  display: inline-block;
-  white-space: nowrap;
-  animation: marquee 100s linear infinite;
-  padding-left: 100vw;
-}
-@keyframes marquee {
-  0% { transform: translateX(-10%); }
-  100% { transform: translateX(-110%); }
-}
-
-.h3 .Button {transform: scale(.8);}
-.h4 .Button {transform: scale(.65) translateY(1.5px);}
-.h4 .Button svg {transform: scale(.85);}
 
 
 

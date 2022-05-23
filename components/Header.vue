@@ -9,21 +9,10 @@
     <nuxt-link to="/" aria-label="Home"><Logo /></nuxt-link>
     
     <ul>
-      <li><a lang="en" class="h3" href="/#index-projects">
-        projects<div lang="jp">これまでのプロジェクト</div>
-      </a></li>
-      <li><a lang="en" class="h3" href="/#index-about">
-        about me<div lang="jp">磯部たくみについて</div>
-      </a></li>
-      <li><a lang="en" class="h3" href="/#index-inhouse">
-        in house<div lang="jp">お酒とハーブのコト</div>
-      </a></li>
-      <li><a lang="en" class="h3" href="/#index-contact">
-        contact<div lang="jp">お問い合わせ</div>
-      </a></li>
-      <li><a lang="en" class="h3" href="/#index-instagram">
-        instgram<div lang="jp">日々のコト</div>
-      </a></li>
+      <li><a lang="en" href="/#index-contact">Service</a></li>
+      <li><a lang="en" href="/#index-projects">Projects</a></li>
+      <li><a lang="en" href="/#index-about">About me</a></li>
+      <li><a lang="en" href="/#index-inhouse">in house</a></li>
     </ul>
     <!--
     <button
@@ -86,24 +75,30 @@ export default {
 <style>
 
 header.is-top {
-  padding-top: 7.5rem;
+  padding-top: 2.5rem;
   background: transparent;
   backdrop-filter: none;
 }
 
 header {
+  width: 100%;
   position: fixed;
   top: 0;
   transition: 1s ease-in-out;
   z-index: 999;
-  padding: 6.5rem 5vw 0;
+  padding: 2.5rem 5vw 0;
   padding-top: 7.5rem;
 }
 
-header ul {margin-top: 15rem;}
+header ul {
+  margin-top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 header ul li a {
   margin-bottom: 2.5rem;
-  font-size: 2.2rem;}
+  font-size: 1.6rem;}
 header ul li div {opacity: .5;font-size: 1.2rem;}
 
 
@@ -185,7 +180,6 @@ header.is-active * {fill: var(--textColor);}
 
 @media screen and (max-width: 480px) {
 
-  header ul {display: none;}
 
 }
 

@@ -1,38 +1,53 @@
 <template>
-  <main id="luxy" ref="scrollWrap"> 
+  <main class="index-main"> 
     
-    <div class="section-wrapper luxy-el" ref="scrollContainer">
     <section id="index-top">
+      <div class="box">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+      </div>
+      <div class="wrapper">
+        <div class="h4 orange">关于我 - 磯部拓</div>
+        <h1 class="h0" lang="en">Hi, I’m Takumi Isobe, <br>an art director</h1>
+        <h2 class="h5">常に変化を求め、古く、新しく、時には可笑しく。<br>有為転変の世に最大限適応していくブランド構築を<br>行っていきます。</h2>
+        <nuxt-link to="/about" class="h3" lang="en">About me</nuxt-link>
+      </div>
+    </section>
+
+    <section id="index-service">
       <div class="section-header">
-        <small class="h6">業務内容</small>
-        <h1 lang="en" class="heading luxy-el">art direction</h1>
-        <h2 lang="en" class="h4">Design / Web development / Photography</h2>
+        <small class="h4">服务</small>
+        <h1 lang="en" class="heading">Services</h1>
       </div>
       <div class="wrapper">
-        <p class="h5">多種多様なブランドのパートナーとして、適切なマーケットアプローチを通し、アート・テクニカルディレクションを実施し、ブランドの価値を最大限に高めます。ブランドの伝わる化を一つの課題とし、ビジュアル・テクノロジーを通し、魅せるだけで終わらない、受け手に伝わるブランドの構築を行なっていきます。ビジュアル領域における制作のご相談は、お気軽にお問い合わせください。</p>
-        <p lang="en" class="h5">As a partner of a wide variety of brands, we will carry out art and technical direction through an appropriate market approach to maximise the core value of the brand. Through visual technology, I will build a brand that can be conveyed to the recipients, not just fascinating. Feel free to contact us for visual development.</p>
-      </div>
-      <div class="wrapper">
-        <h3 class="h5">
-          <div>- ブランドデザインの構築<br>- ブランドコンテンツの企画・制作<br>- UI / グラフィックデザインの開発<br></div>
-          <div>- モダンフロント開発<br>- デジタル施策の企画<br>- メインビジュアルの撮影</div>
-        </h3>
-        <div id="cookie" class="cookie-consent">
-          <div class="cookie-text h7"><span lang="en" class="h5">This website uses Cookie</span><br>当サイトではCookieを使用します。Cookieの使用に関する詳細は「<a href="#privacy-policy">プライバシーポリシー</a>」をご覧ください。</div>
-          <div>
-            <button lang="en" class="cookie-agree">Accepet</button>
-            <button lang="en" class="cookie-decline">Decline</button>
-          </div>
-          
+        <div class="container">
+          <div class="orange">品牌<br>識別</div>
+          <h2 class="h1" lang="en">01. Brand Identity</h2>
+          <p>多種多様なブランドのパートナーとして、適切なマーケットアプローチを通し、アート・テクニカルディレクションを実施し、ブランドの価値を最大限に高めます。アート・テクニカルディレクションを実施し、ブランドの価値を最大限に高めます。</p>
         </div>
+        <div class="container">
+          <div class="orange">平面<br>設計</div>
+          <h2 class="h1" lang="en">02. Graphic / UI Design</h2>
+          <p>多種多様なブランドのパートナーとして、適切なマーケットアプローチを通し、アート・テクニカルディレクションを実施し、ブランドの価値を最大限に高めます。アート・テクニカルディレクションを実施し、ブランドの価値を最大限に高めます。</p>
+        </div>
+        <div class="container">
+          <div class="orange">网络<br>开发</div>
+          <h2 class="h1" lang="en">03. Web Development</h2>
+          <p>多種多様なブランドのパートナーとして、適切なマーケットアプローチを通し、アート・テクニカルディレクションを実施し、ブランドの価値を最大限に高めます。アート・テクニカルディレクションを実施し、ブランドの価値を最大限に高めます。</p>
+        </div>
+        <div class="container">
+          <div class="orange">摄影<br>导演</div>
+          <h2 class="h1" lang="en">04. Photography</h2>
+          <p>多種多様なブランドのパートナーとして、適切なマーケットアプローチを通し、アート・テクニカルディレクションを実施し、ブランドの価値を最大限に高めます。アート・テクニカルディレクションを実施し、ブランドの価値を最大限に高めます。</p>
+        </div>
+
       </div>
-      
     </section>
 
     <section id="index-projects">
       <div class="section-header">
-        <small class="h6">これまでのプロジェクト</small>
-        <h1 lang="en" class="heading">projects</h1>
+        <small class="h4">服务</small>
+        <h1 lang="en" class="heading">Services</h1>
       </div>
 
       <div class="wrapper">
@@ -56,7 +71,7 @@
     <section id="index-inhouse"></section>
     <section id="index-contact"></section>
     <section id="index-instagram"></section>
-    </div>
+  
   </main>
 
 </template>
@@ -122,12 +137,59 @@ export default {
 </script>
 
 <style>
+
+#Index main {position: relative;z-index: 2;}
+
+#index-top {
+  height: 100vh;
+  position: relative;
+}
+
+#index-top .wrapper {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  padding-bottom: 5rem;
+}
+
+#index-top .box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+#index-top .box div {
+  width: 42.5vw;
+  height: 42.5vw;
+  border-radius: 50%;
+  background: white;
+  position: relative;
+}
+
+#index-top .box .circle-1 {
+  margin-right: -5rem;
+  z-index: 3;
+  background: #13131B;
+  border: solid 1px white;
+}
+#index-top .box .circle-2 {margin-left: -5rem;z-index: 2s;}
+
+#index-top .wrapper h1 {
+  line-height: 1.2;
+  margin: 1rem 0;
+}
+
+
+@media screen and (min-width: 720px) {
+
   #Index section {
     padding-left: 21.5%;
     padding-right: 10%;
   }
   #Index #luxy {z-index: 3;}
-  #Index .section-wrapper {position: relative;z-index: 2;}
+  
   .bg {
     width: 100vw;
     height: 100vh;
@@ -152,29 +214,6 @@ export default {
   #index-top .wrapper p:nth-of-type(1) {font-size: 1.48rem;line-height: 2;}
   #index-top .wrapper p:nth-of-type(2) {font-size: 1.8rem;line-height: 1.6;}
   #index-top h3 {margin-top: 1rem;line-height:2;}
-
-  
-  #index-top .cookie-consent {
-    width: calc(68.5% * .475);
-    padding: 4.5rem 8rem 4.5rem 5rem;
-    background: white;
-    transition: 1s ease-in-out;
-    position: fixed;
-    left: auto;
-    right: 0;
-    margin-right: 10%;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  #index-top .cookie-text {width: 65%;}
-  #index-top .cookie-consent * {color: black;}
-  #index-top .cookie-agree {font-size: 1.8rem;}
-  #index-top .cookie-decline {font-size: 1.4rem;opacity: .5;margin-top: .5rem;}
-  #index-top #cookie.scrolled {opacity: 0;pointer-events: none;}
-  #index-top #cookie button {border: none;background: transparent;display: block;}
-
 
 
   #index-projects {margin-top: 12.5rem;}
@@ -218,6 +257,8 @@ export default {
     margin: 0.3rem 0 0.4rem;
   }
 
+}
+
    
     
 
@@ -225,13 +266,7 @@ export default {
     @media screen and (max-width: 480px) {
 
 
-      #Index section {padding: 0 10%;}
-
-      #index-top .wrapper {flex-direction: column;}
-      #index-top .wrapper p {width: 100%;}
-      #index-top .wrapper p:nth-of-type(1) {font-size: 1.3rem;}
-      #index-top .wrapper p:nth-of-type(2) {font-size: 1.4rem;}
-      #index-top #cookie {display: none;}
+      #Index section {padding: 0 8.25%;}
 
       .bg {
     width: 100vw;
@@ -249,7 +284,7 @@ export default {
             position: fixed;
             padding: 5rem 7vw 0;}
         header .Logo {font-size: 1.8rem;}
-    }
+    
 
 
 #index-projects .top {display: none;}
@@ -272,192 +307,14 @@ export default {
 
 #index-projects .container img {transition: 1s;}
 
-
-
-#i3 {
-  display: none;
-  width: 100%;
-  padding-bottom: 7.5rem;
 }
-
-#i3 h2 {margin: 1.5rem 0 4.5rem;}
-#i3 .media {
-  width: 100vw;
-  height: 132.5vw;
-  margin-left: -7.25vw;
-  margin-bottom: 7.5rem;
-  background-image: url("~assets/image/media.webp");
-  background-position: center;
-  background-size: 100%;
-}
-
 
 @media screen and (max-width: 480px) {
-
-  #i2 .wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 5rem;
-  }
-  #i2 .container:nth-of-type(1) h3 {display: none;}
-  #i2 .wrapper a:nth-of-type(3),#i2 .wrapper a:nth-of-type(4),
-  #i2 .wrapper a:nth-of-type(6),#i2 .wrapper a:nth-of-type(7) {width: 49%;}
-  #i2 .wrapper a:nth-of-type(3) img,#i2 .wrapper a:nth-of-type(4) img,
-  #i2 .wrapper a:nth-of-type(6) img,#i2 .wrapper a:nth-of-type(7) img {aspect-ratio: 3/4;}
-}
-
-
-@media screen and (min-width: 720px) {
-
-  #i1 {
-    height: auto;
-    min-height: auto;
-    display: block;
-    padding-top: 15rem;
-    margin-bottom: 15rem;
-  }
-  #i1 .top {display: none;}
-  #i1 .top h4 {
-    margin-left: 1.75%;
-    margin-top: -.75%;
-  }
-
-  #i1 h1.heading {
-    font-size: 3.6rem;
-    line-height: 1.8;}
-
-  #i1 .wrapper {display: flex;}
-  #i1 .wrapper div:nth-of-type(1).box {
-    width: auto;
-    margin-left: 5rem;
-  }
-  #i1 .wrapper div:nth-of-type(1).box p {    
-    font-size: 1.6rem;
-    width: 100%;
-    margin-top: 0;}
-  #i1 .wrapper div:nth-of-type(1).box h4, #i1 .wrapper div:nth-of-type(1).box h3 {margin-top: 0;}
-
-  #i1 .wrapper div:nth-of-type(1).box h3 {
-    font-size: 1.65rem;
-    line-height: 2;
-    width: 50%;}
-  
-  #i1 p {width: 45%;margin-bottom: 2.5rem;}
-  #i1 .box h2.h3 {font-size: 2rem;}
-  #i1 .box span.h4 {font-size: 1.6rem;}
-  #i1 .box a h2.bilingual::before {margin-bottom: 0;}
-
-
-  #i2 .top {display: none;}
-  #i2 .wrapper {
-    display: flex;
-    align-items: top;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 7.5rem;
-  }
-
-  #i2 .wrapper a {
-    width: 49.5%;
-    margin-bottom: 2.5rem;}
-  #i2 .wrapper a img {
-    width: 100%;
-    height: calc((30vw  - 16.3px)/5*6);}
-  #i2 .wrapper a h2 {font-size: 2.4rem;}
-  #i2 .wrapper a h3 {font-size: 1.6rem;}
-  #i2 .wrapper a h4 {font-size: 1.2rem;}
-
-  #i2 .container {
-    display: grid;
-    margin-top: 0;
-    overflow: hidden;}
-
-  #i2 .container .thumbnail, #i2 .container .box {grid-area: 1/-1;}
-  #i2 .container img {transition: .5s ease-in-out;}
-  #i2 .container .box h2, #i2 .container .box * {color: var(--backgroundColor);}
-  #i2 .container .box h2, #i2 .container .box h3 {opacity: 1;}
-  #i2 .container .box h3 {display: block;}
-  #i2 .container .box {
-    padding-left: 3rem;
-    padding-bottom: 2.5rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    
-    opacity: 0;
-    transition: .5s .15s ease-in-out;}
-  #i2 .container:hover {opacity: 1;}
-  #i2 .container:hover .box {
-    opacity: 1;
-    transition: .5s ease-in-out;}
-  #i2 .container:hover img {
-    filter: brightness(.75) contrast(1.15);
-    transform: scale(1.025);
-  }
-  #i2 .container img {transition: 1s;}
-
-
-  #i2 .wrapper a:nth-of-type(1) {
-    width: 100%;
-    margin-bottom: 2.5rem;}
-  #i2 .wrapper a:nth-of-type(1) h2{font-size: 2.8rem;}
-  #i2 .wrapper a:nth-of-type(1) h3{font-size: 2rem;}
-  #i2 .wrapper a:nth-of-type(1) h4{font-size: 1.4rem;}
-  #i2 .wrapper a:nth-of-type(1) img {
-    width: 100%;
-    aspect-ratio: 2/1;
-    height: 45vw;
-    margin-left: 0;}
-
-
-#i2 .wrapper a:nth-of-type(2), #i2 .wrapper a:nth-of-type(3),#i2 .wrapper a:nth-of-type(4), 
-#i2 .wrapper a:nth-of-type(6), #i2 .wrapper a:nth-of-type(7) {width: calc(30vw  - 16.3px);}
-
-#i2 .wrapper a:nth-of-type(1), #i2 .wrapper a:nth-of-type(5), #i2 .wrapper a:nth-of-type(8) {
-  width: calc(60vw - 8px);
 }
 
 
 
 
-
-
-
-
-
-/*
-  #i2 .wrapper a:nth-of-type(2) {
-    width: 100%;
-    display: flex;}
-  #i2 .wrapper a:nth-of-type(2) img {width: 60%;} 
-  #i2 .wrapper a:nth-of-type(2) .box {
-    display: block;
-    margin-left: 5rem;
-    transition: .5s ease-out;}
-  #i2 .wrapper a:nth-of-type(2):hover .box {transform: translateX(-.5rem);}
-  #i2 .wrapper a:nth-of-type(2) * {
-    opacity: 1;
-    color: var(--textColor);}
-  #i2 .wrapper a:nth-of-type(2) h2 {font-size: 3.2rem;}
-  #i2 .wrapper a:nth-of-type(2) h3 {font-size: 2rem;}
-  #i2 .wrapper a:nth-of-type(2) h4 {font-size: 1.4rem;}
-
-*/
-
-
-}
-
-
-@media only screen and (min-width: 481px) and (max-width: 1024px) {
-  #i1 .wrapper {flex-direction: column;}
-  #i1 .wrapper h1 {font-size: 4rem;}
-  #i1 .wrapper div:nth-of-type(1).box {
-    margin-left: 0;
-    margin-top: 3rem;
-  }
-}
 
 
 </style>
