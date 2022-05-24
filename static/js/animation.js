@@ -64,7 +64,7 @@ if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches)
 
 
 
-
+/*
 
 gsap.registerPlugin(ScrollTrigger);
     let revealContainers = document.querySelectorAll(".reveal");
@@ -75,7 +75,7 @@ gsap.registerPlugin(ScrollTrigger);
           //trigger: container,
           trigger: container,
           markers: true,
-          start: 'top bottom',
+          start: 'top center+=45%',
           toggleActions: "restart none none reset"
         }
       });
@@ -96,3 +96,4 @@ gsap.registerPlugin(ScrollTrigger);
       });
     });
 
+*/

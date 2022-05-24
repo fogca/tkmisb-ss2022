@@ -1,5 +1,5 @@
 <template>
-<div>
+<div id="Header">
   <header 
   :class="{
     'is-active': isActiveMenu, 
@@ -78,20 +78,27 @@ export default {
 
 <style>
 
+#Header, header {mix-blend-mode: normal;}
+#Header {
+  position: relative;
+  z-index: 99;
+}
+
 header.is-top {
   padding-top: 2rem;
   background: transparent;
-  backdrop-filter: none;
 }
+
+header.scrolled {transform: translateY(-64px);}
 
 header {
   width: 100%;
   position: fixed;
   top: 0;
   transition: 1s ease-in-out;
-  z-index: 999;
-  padding: 2rem 5vw 0;
-  padding-top: 7.5rem;
+  z-index: 99;
+  padding: 2rem 8.25vw 0;
+  background: #0D0D12;
 }
 
 header hr {
@@ -117,16 +124,11 @@ header ul li div {opacity: .5;font-size: 1.2rem;}
 header #Path_1603 {opacity: 0;}
 header.is-top #Path_1603 {opacity: 1;}
 
-header.scrolled {transform: translateY(0);}
 
 
 header .Logo {
-  width: 11rem;
+  font-size: 2rem;
   transition: .5s;
-}
-header.scrolled .Logo {
-  width: 10.5rem;
-  transform: translateY(-8px);
 }
 header #Path_1603 {transition: .3s ease-in-out;}
 header.scrolled #Path_1603 {opacity: 0;}

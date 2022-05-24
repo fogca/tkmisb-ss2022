@@ -54,7 +54,7 @@
       <div class="wrapper">
         <nuxt-link v-for="content in contents" :key="content.id" :to="`/archives/${content.id}`" class="container" :aria-label="content.title">
           
-          <div class="reveal">
+          <div class="container">
             <img v-if="content.thumbnail" :src="content.thumbnail.url" :alt="content.title" class="thumbnail">
             <img v-else src="~@/assets/image/media.webp" alt="" class="thumbnail">
           </div>
@@ -139,10 +139,13 @@ export default {
 <style>
 
 #Index main {position: relative;z-index: 2;}
+#Index section {padding: 0 8.25%;}
 
 #index-top {
   height: 100vh;
   position: relative;
+  mix-blend-mode: normal;
+  z-index: -1;
 }
 
 #index-top .wrapper {
@@ -159,6 +162,7 @@ export default {
   transform: translate(-50%, -50%);
   display: flex;
   z-index: -1;
+  mix-blend-mode: normal;
 }
 
 #index-top .box div {
@@ -184,17 +188,24 @@ export default {
 }
 
 
-#index-projects .container {mix-blend-mode: normal;}
+#index-service .wrapper {margin-top: 5rem;}
+#index-service .container {margin-bottom: 6rem;}
+#index-service .container .orange {font-size: 3.6rem;line-height: 1.2;}
+#index-service .container h2 {margin: 1.75rem 0 .5rem;}
+
+
+#index-projects, #index-projects .wrapper, #index-projects .container {mix-blend-mode: normal;}
 #index-projects .reveal {
   width: 100%;
   height: 60vw;
   mix-blend-mode: normal;
 }
 
-#index-projects .reveal img {
+#index-projects .container img {
   width: 100%;
   height: 100%;
   mix-blend-mode: normal;
+  transition: .3s ease-in-out;
 }
 
 
@@ -275,47 +286,6 @@ export default {
 
 }
 
-   
-    
-
-
-    @media screen and (max-width: 480px) {
-
-
-      #Index section {padding: 0 8.25%;}
-
-
-        header {
-            position: fixed;
-            padding: 5rem 7vw 0;}
-        header .Logo {font-size: 1.8rem;}
-    
-
-
-#index-projects .top {display: none;}
-#index-projects h1 {margin-bottom: calc(var(--pX) * 1.5);}
-#index-projects img {width: calc(100%);}
-
-#index-projects .container h2 {margin-top: 0.5rem;}
-#index-projects .container h3 {margin: calc(var(--pX) * 1) 0 calc(var(--pX) * .75);}
-#index-projects .container h3 {display: none;}
-#index-projects .container h4 {font-size: 1.05rem;}
-#index-projects .container {
-  display: grid;
-  margin-top: 0;
-  overflow: hidden;}
-#index-projects .container .thumbnail, #i2 .container .box {grid-area: 1/-1;}
-#index-projects .container img {transition: .5s ease-in-out;}
-#index-projects .container .box h2, #i2 .container .box * {color: var(--backgroundColor);}
-#index-projects .container .box h2, #i2 .container .box h3 {opacity: 1;}
-#index-projects .container .box h3 {display: block;}
-
-#index-projects .container img {transition: 1s;}
-
-}
-
-@media screen and (max-width: 480px) {
-}
 
 
 

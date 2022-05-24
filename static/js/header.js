@@ -1,3 +1,5 @@
+
+/*
 window.addEventListener( "scroll", function() {
     let cookie = document.querySelector("#cookie");
     let rect = cookie.getBoundingClientRect();
@@ -8,6 +10,7 @@ window.addEventListener( "scroll", function() {
         cookie.classList.remove('scrolled');
     }
 });
+*/
 
 
 /*
