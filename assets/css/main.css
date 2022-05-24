@@ -4,13 +4,18 @@
 .fade-enter, .fade-leave-to {opacity: 0;}
 
 
+/*
 html, body {animation: bgColor 5s ease-in-out;}
-body * {
-  mix-blend-mode: difference;
-  animation: text 5s ease-in-out;}
+body * {animation: text 5s ease-in-out;}
+*/
 
-#index-top .box .circle-1 {animation: circle1 10s 3s cubic-bezier(.8,0,0,.8) infinite;}
-#index-top .box .circle-2 {animation: circle2 10s 3s cubic-bezier(.8,0,0,.8) infinite;}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+span, p, .orange {mix-blend-mode: difference;}
+
+
+#index-top .box .circle-1 {animation: circle1 10s 5s cubic-bezier(.8,0,0,.8) infinite;}
+#index-top .box .circle-2 {animation: circle2 10s 5s cubic-bezier(.8,0,0,.8) infinite;}
 
 @keyframes circle1 {
   50% {
@@ -46,6 +51,7 @@ body * {
   background-size: cover;
   background-repeat: no-repeat;
   opacity: .5;
+  transition: .5s ease-in-out;
 }
 
 

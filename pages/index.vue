@@ -9,7 +9,16 @@
       </div>
       <div class="wrapper">
         <div class="h4 orange">关于我 - 磯部拓</div>
-        <h1 class="h0" lang="en">Hi, I’m Takumi Isobe, <br>an art director</h1>
+        <h1 class="h0" lang="en" id="top-Line">
+          <span>H</span><span>i</span><span>,</span><span> </span>
+          <span>I</span><span>'</span><span>m</span><span> </span>
+          <span>T</span><span>a</span><span>k</span><span>u</span><span>m</span><span>i</span><span> </span>
+          <span>I</span><span>s</span><span>o</span><span>b</span><span>e</span><span>,</span>
+          <br><span> </span><span>a</span><span>n</span>
+          <span> </span><span>a</span><span>r</span><span>t</span>
+          <span> </span><span>d</span><span>i</span><span>r</span><span>e</span><span>c</span><span>t</span><span>o</span><span>r</span>
+          <!--Hi, I’m Takumi Isobe, <br>an art director-->
+          </h1>
         <h2 class="h5">常に変化を求め、古く、新しく、時には可笑しく。<br>有為転変の世に最大限適応していくブランド構築を<br>行っていきます。</h2>
         <nuxt-link to="/about" class="h3" lang="en">About me</nuxt-link>
       </div>
@@ -17,7 +26,7 @@
 
     <section id="index-service">
       <div class="section-header">
-        <small class="h4">服务</small>
+        <small class="h5">服务</small>
         <h1 lang="en" class="heading">Services</h1>
       </div>
       <div class="wrapper">
@@ -47,22 +56,22 @@
 
     <section id="index-projects">
       <div class="section-header">
-        <small class="h4">选定项目</small>
+        <small class="h5">选定项目</small>
         <h1 lang="en" class="heading">Selected projects</h1>
       </div>
 
       <div class="wrapper">
         <nuxt-link v-for="content in contents" :key="content.id" :to="`/archives/${content.id}`" class="container" :aria-label="content.title">
           
-          <div class="container">
+          <div class="box">
             <img v-if="content.thumbnail" :src="content.thumbnail.url" :alt="content.title" class="thumbnail">
             <img v-else src="~@/assets/image/media.webp" alt="" class="thumbnail">
           </div>
 
           <div class="box">
-            <h2 lang="en" class="h4">{{ content.title }}</h2>
-            <h3 lang="en" class="h4">{{ content.description }}</h3>
-            <h4 lang="en" class="h6 semitrans">{{ content.work }}</h4>
+            <h2 lang="en" class="h5">{{ content.direction }}</h2>
+            <h1 lang="en" class="h2">{{ content.title }}</h1>
+            <h3 lang="en" class="h6 semitrans">{{ content.work }}</h3>
           </div>
         </nuxt-link>
       </div>
@@ -172,6 +181,7 @@ export default {
   background: white;
   position: relative;
   mix-blend-mode: normal;
+  will-change: animation;
 }
 
 #index-top .box .circle-1 {
@@ -186,20 +196,31 @@ export default {
   line-height: 1.2;
   margin: 1rem 0;
 }
+#index-top .wrapper h2 {margin-bottom: 1.5rem;}
 
 
+#index-top #top-Line span {display: inline-block;}
+
+#index-service {margin-top: 6rem;}
 #index-service .wrapper {margin-top: 5rem;}
 #index-service .container {margin-bottom: 6rem;}
+#index-service .container:nth-of-type(4) {margin-bottom: 0;}
 #index-service .container .orange {font-size: 3.6rem;line-height: 1.2;}
 #index-service .container h2 {margin: 1.75rem 0 .5rem;}
 
 
-#index-projects, #index-projects .wrapper, #index-projects .container {mix-blend-mode: normal;}
+#index-projects {margin-top: 12.5rem;}
+#index-projects .wrapper {margin-top: 3rem;}
 #index-projects .reveal {
   width: 100%;
   height: 60vw;
   mix-blend-mode: normal;
 }
+
+#index-projects .container {margin-bottom: 6rem;}
+
+#index-projects .container h1 {margin: 0.6rem 0 0.6rem;}
+#index-projects .container h2 {margin-top: 1.5rem;}
 
 #index-projects .container img {
   width: 100%;

@@ -85,7 +85,7 @@ export default {
 }
 
 header.is-top {
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   background: transparent;
 }
 
@@ -127,6 +127,7 @@ header.is-top #Path_1603 {opacity: 1;}
 
 
 header .Logo {
+  margin-left: -0.5rem;
   font-size: 2rem;
   transition: .5s;
 }

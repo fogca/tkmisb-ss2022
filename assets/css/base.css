@@ -33,6 +33,9 @@ html, body {
     background-color: var(--backgroundColor);
 }
 
+@media screen and (max-width: 480px) {
+    html {font-size: 55%;}
+}
 
 div, h1, h2, h3, h4, h5, h6, p, a, span, button {
     font-family: "Lausanne", TsukuGoPro-B, TazuganeGothicStdN-Medium, sans-serif;

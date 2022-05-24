@@ -1,45 +1,74 @@
-/*
-const tl = gsap.timeline()
-    //tl.set("#top-Visual", { width: "100vw" });
-
-    tl.from("#Index .bg", {
-        autoAlpha: 0,
-        ease: "power3.inOut",
-        duration: 3,
-    }, "+=3");
-    
-    tl.from("header li", {
-        opacity: 0,
-        y: 10,
-        stagger: .25,
-        ease: "power3.inOut",
-        duration: 3,}, "-=10");
-    
-
-
-
 
 if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches) {
 
     //SP Animation
-    
     const tl = gsap.timeline()
-    //tl.set("#top-Visual", { width: "100vw" });
+    tl.set("body", { backgroundColor: "#FFFFFF" });
+    //tl.set("#index-top .circle-1", { marginRight: "-21.25vw"});
+    //tl.set("#index-top .circle-2", { marginLeft: "-21.25vw" });
 
-    tl.from("#Index .first-section .wrapper .sp *", {
-        //width: "105%",
-        autoAlpha: 0,
-        stagger: .2,
-        x: 3,
+    tl.from("body", {
+        backgroundColor: "#FFFFFF",
         ease: "power3.inOut",
-        duration: 3,
-    });
+        duration: 3,}, "op+=1");
+
+    tl.from(".bg", {
+      //width: "105%",
+      opacity: 0,
+      ease: "power1.inOut",
+      duration: 5,}, "op");
+
+    tl.from("#top-Line span", {
+      //width: "105%",
+      opacity: 0,
+      y: 5,
+      stagger: .035,
+      ease: "power4.inOut",
+      duration: 3,}, "op+=1");
+
+    tl.from("#index-top h2", {
+      //width: "105%",
+      opacity: 0,
+      y: 3,
+      ease: "power4.inOut",
+      duration: 3,}, "op+=3");
+
+    tl.from("#index-top .wrapper .orange", {
+      opacity: 0,
+      x: 5,
+      ease: "power4.inOut",
+      duration: 3,}, "op+=3");
+
+    tl.from("#index-top .wrapper a", {
+      opacity: 0,
+      x: 5,
+      ease: "power4.inOut",
+      duration: 2.5,}, "op");
+
+    tl.from("#Header hr", {
+      opacity: .25,
+      width: 50,
+      stagger: .25,
+      ease: "power4.inOut",
+      duration: 2.5,}, "op+=.5");
+
+    tl.from("#index-top .circle-1", {
+      marginRight: "-21.25vw",
+      ease: "power4.inOut",
+      duration: 2.5,}, "op+=2");
+
+    tl.from("#index-top .circle-2", {
+      marginLeft: "-21.25vw",
+      ease: "power4.inOut",
+      duration: 2.5,}, "op+=2");
+      
+      
     
   } else {
 
     const tl = gsap.timeline()
     //tl.set("#top-Visual", { width: "100vw" });
-
+    /*
     tl.from("#work-top .container", {
         //width: "105%",
         autoAlpha: 0,
@@ -50,10 +79,10 @@ if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches)
         stagger: .25,
         duration: 3,
     });
+    */
 
 }
 
-*/
 
 
 
