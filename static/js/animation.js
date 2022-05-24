@@ -65,9 +65,7 @@ if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches)
 
 
 
-// Top Project Image animation
 
-/*
 gsap.registerPlugin(ScrollTrigger);
     let revealContainers = document.querySelectorAll(".reveal");
     revealContainers.forEach((container) => {
@@ -97,6 +95,4 @@ gsap.registerPlugin(ScrollTrigger);
         ease: "Power4.out"
       });
     });
-
-    */
 

@@ -1,10 +1,11 @@
 <template>
-  <main class="index-main"> 
+  <main class="index-main">
+    <div class="bg"></div>
     
     <section id="index-top">
       <div class="box">
-        <div class="circle-1"></div>
-        <div class="circle-2"></div>
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
       </div>
       <div class="wrapper">
         <div class="h4 orange">关于我 - 磯部拓</div>
@@ -46,8 +47,8 @@
 
     <section id="index-projects">
       <div class="section-header">
-        <small class="h4">服务</small>
-        <h1 lang="en" class="heading">Services</h1>
+        <small class="h4">选定项目</small>
+        <h1 lang="en" class="heading">Selected projects</h1>
       </div>
 
       <div class="wrapper">
@@ -111,7 +112,6 @@ export default {
     },
     
     mounted () {
-
       this.$adobeFonts(document)
 
       try{
@@ -153,11 +153,12 @@ export default {
 }
 
 #index-top .box {
-  position: absolute;
+  position: fixed;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  z-index: -1;
 }
 
 #index-top .box div {
@@ -166,6 +167,7 @@ export default {
   border-radius: 50%;
   background: white;
   position: relative;
+  mix-blend-mode: normal;
 }
 
 #index-top .box .circle-1 {
@@ -179,6 +181,20 @@ export default {
 #index-top .wrapper h1 {
   line-height: 1.2;
   margin: 1rem 0;
+}
+
+
+#index-projects .container {mix-blend-mode: normal;}
+#index-projects .reveal {
+  width: 100%;
+  height: 60vw;
+  mix-blend-mode: normal;
+}
+
+#index-projects .reveal img {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: normal;
 }
 
 
@@ -268,18 +284,7 @@ export default {
 
       #Index section {padding: 0 8.25%;}
 
-      .bg {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;left: 0;
-    z-index: 1;
-    background-attachment: fixed;
-    background-image: url("assets/image/bg_sp.jpg");
-    background-position: top left;
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
+
         header {
             position: fixed;
             padding: 5rem 7vw 0;}

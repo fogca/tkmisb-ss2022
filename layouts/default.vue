@@ -1,10 +1,10 @@
 <template>
 <div>
-    <div class="bg"></div>
     <Header />
     <Nuxt />
 </div>
 </template>
+
 
 <style>
 .fade-enter-active,

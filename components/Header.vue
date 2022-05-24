@@ -7,6 +7,8 @@
     'is-top': headerTopFlag }" 
   >
     <nuxt-link to="/" aria-label="Home"><Logo /></nuxt-link>
+
+    <hr>
     
     <ul>
       <li><a lang="en" href="/#index-contact">Service</a></li>
@@ -14,6 +16,8 @@
       <li><a lang="en" href="/#index-about">About me</a></li>
       <li><a lang="en" href="/#index-inhouse">in house</a></li>
     </ul>
+
+    <hr>
     <!--
     <button
       type="button"
@@ -75,7 +79,7 @@ export default {
 <style>
 
 header.is-top {
-  padding-top: 2.5rem;
+  padding-top: 2rem;
   background: transparent;
   backdrop-filter: none;
 }
@@ -86,19 +90,27 @@ header {
   top: 0;
   transition: 1s ease-in-out;
   z-index: 999;
-  padding: 2.5rem 5vw 0;
+  padding: 2rem 5vw 0;
   padding-top: 7.5rem;
 }
 
+header hr {
+  width: 100vw;
+  margin-left: -8.25vw;
+  background: white;
+  border: solid .3px white;
+}
+
+header hr:nth-of-type(1) {margin-top: 1.3rem;}
+header hr:nth-of-type(2) {margin-top: 1.3rem;}
+
 header ul {
-  margin-top: 0;
+  margin-top: 1.2rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-header ul li a {
-  margin-bottom: 2.5rem;
-  font-size: 1.6rem;}
+header ul li a {font-size: 1.6rem;}
 header ul li div {opacity: .5;font-size: 1.2rem;}
 
 
@@ -110,7 +122,6 @@ header.scrolled {transform: translateY(0);}
 
 header .Logo {
   width: 11rem;
-  transform: translateY(-1rem);
   transition: .5s;
 }
 header.scrolled .Logo {
