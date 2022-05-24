@@ -3,20 +3,31 @@ if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches)
 
     //SP Animation
     const tl = gsap.timeline()
+    //tl.set("main", { autoAlpha: 0 });
+    tl.set(".bg", { opacity: 0 });
     tl.set("body", { backgroundColor: "#FFFFFF" });
-    //tl.set("#index-top .circle-1", { marginRight: "-21.25vw"});
-    //tl.set("#index-top .circle-2", { marginLeft: "-21.25vw" });
+    tl.set("hr", { width: 0 });
 
     tl.from("body", {
-        backgroundColor: "#FFFFFF",
-        ease: "power3.inOut",
-        duration: 3,}, "op+=1");
+      backgroundColor: "#FFFFFF",
+      ease: "power3.inOut",
+      duration: 3,}, "op+=1");
+
+    tl.from("section", {
+      autoAlpha: 0,
+      ease: "power4.inOut",
+      duration: 2,}, "op+=1");
+
+    tl.from(".circles", {
+      opacity: 0,
+      ease: "power2.inOut",
+      duration: 2,}, "op");
 
     tl.from(".bg", {
       //width: "105%",
       opacity: 0,
-      ease: "power1.inOut",
-      duration: 5,}, "op");
+      ease: "power4.inOut",
+      duration: 3,}, "op+=2.5");
 
     tl.from("#top-Line span", {
       //width: "105%",
@@ -43,24 +54,24 @@ if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches)
       opacity: 0,
       x: 5,
       ease: "power4.inOut",
-      duration: 2.5,}, "op");
+      duration: 2.5,}, "op+=3");
 
     tl.from("#Header hr", {
       opacity: .25,
-      width: 50,
+      width: 0,
       stagger: .25,
       ease: "power4.inOut",
       duration: 2.5,}, "op+=.5");
 
-    tl.from("#index-top .circle-1", {
+    tl.from(".circles .circle-1", {
       marginRight: "-21.25vw",
       ease: "power4.inOut",
-      duration: 2.5,}, "op+=2");
+      duration: 2.5,}, "op+=2.5");
 
-    tl.from("#index-top .circle-2", {
+    tl.from(".circles .circle-2", {
       marginLeft: "-21.25vw",
       ease: "power4.inOut",
-      duration: 2.5,}, "op+=2");
+      duration: 2.5,}, "op+=2.5");
       
       
     

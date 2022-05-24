@@ -1,12 +1,17 @@
 <template>
   <main class="index-main">
     <div class="bg"></div>
+    <div class="circles">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+    </div>
     
     <section id="index-top">
+      <!--
       <div class="box">
         <div class="circle circle-1"></div>
         <div class="circle circle-2"></div>
-      </div>
+      </div>-->
       <div class="wrapper">
         <div class="h4 orange">关于我 - 磯部拓</div>
         <h1 class="h0" lang="en" id="top-Line">
@@ -164,7 +169,7 @@ export default {
   padding-bottom: 5rem;
 }
 
-#index-top .box {
+.circles {
   position: fixed;
   top: 45%;
   left: 50%;
@@ -174,7 +179,7 @@ export default {
   mix-blend-mode: normal;
 }
 
-#index-top .box div {
+.circles div {
   width: 42.5vw;
   height: 42.5vw;
   border-radius: 50%;
@@ -184,13 +189,13 @@ export default {
   will-change: animation;
 }
 
-#index-top .box .circle-1 {
+.circles .circle-1 {
   margin-right: -5rem;
   z-index: 3;
   background: #13131B;
   border: solid 1px white;
 }
-#index-top .box .circle-2 {margin-left: -5rem;z-index: 2s;}
+.circles .circle-2 {margin-left: -5rem;z-index: 2s;}
 
 #index-top .wrapper h1 {
   line-height: 1.2;

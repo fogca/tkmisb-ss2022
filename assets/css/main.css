@@ -13,10 +13,10 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
 span, p, .orange {mix-blend-mode: difference;}
 
-
-#index-top .box .circle-1 {animation: circle1 10s 5s cubic-bezier(.8,0,0,.8) infinite;}
-#index-top .box .circle-2 {animation: circle2 10s 5s cubic-bezier(.8,0,0,.8) infinite;}
-
+/*
+.circles .circle-1 {animation: circle1 10s 5.5s cubic-bezier(.8,0,0,.8) infinite;}
+.circles .circle-2 {animation: circle2 10s 5.5s cubic-bezier(.8,0,0,.8) infinite;}
+*/
 @keyframes circle1 {
   50% {
     transform: translateX(50%)
