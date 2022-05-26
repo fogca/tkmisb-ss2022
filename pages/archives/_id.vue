@@ -1,6 +1,8 @@
 <template>
     <main>
+      <div class="bg"></div>
         <section id="s1">
+          <img :src="archive.thumbnail.url" class="thumbnail" :alt="archive.title">
             <h1 lang="en" class="h2">{{ archive.title }}</h1>
             <h2 lang="en" class="h5">{{ archive.description }}</h2>
             <div class="wrapper">
@@ -28,7 +30,6 @@
                 <dd lang="en" class="h4">{{ archive.client }}</dd>
               </dl>
             </div>
-            <img :src="archive.thumbnail.url" class="thumbnail" :alt="archive.title">
             
         </section> 
 
@@ -229,17 +230,17 @@ export default {
 <style>
 
 .Slug main {position: relative;z-index: 3;}
-.Slug section {padding-left: 21.5%;padding-right: 10%;}
+.Slug section {padding: 0 8.25vw;}
 
 .Slug img {width: 100%;}
 
 #s1 .thumbnail {    
   width: 100vw;
-  margin-left: -7.5vw;}
+  margin-left: -8.25vw;}
 #s1 h1 {
   text-transform: capitalize;
   font-size: 2.6rem;
-  margin-top: 14.5rem;
+  margin-top: 3rem;
 }
 
 #s1 .wrapper {margin: 4rem 0 5.5rem;}
@@ -257,18 +258,15 @@ export default {
 
 
 
-
+#s2, #s2 * {mix-blend-mode: normal;}
 
 #s2 .body h4 {
   margin-top: 5rem;
   letter-spacing: .0125em;}
 #s2 .body h1 {
-  
   font-size: 2.2rem;
   width: fit-content;
   margin: .5rem 0 1.5rem;
-  background: var(--textColor);
-  color: var(--backgroundColor);
   line-height: 1.2;
   padding: .15rem 0.15rem 0;
   letter-spacing: .05em;
@@ -371,8 +369,8 @@ export default {
   width: 100%;
   margin-left: 0;}
 
-  #s2 .body {
-    width: 80%;
+  #s1 *, #s2 .body {
+    width: 65%;
     margin-left: auto;
     margin-right: auto;
   }

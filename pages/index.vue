@@ -136,6 +136,19 @@ export default {
 
       gsap.registerPlugin(ScrollTrigger);
       this.Animation();
+
+      //Store the certain local position and bring it back here when the page back
+      (() => {
+      let entries = performance.getEntriesByType("navigation");
+      entries.forEach((entry) => {
+        if (entry.type == "back_forward" && sessionStorage.getItem("scrollY") != null) {
+          window.scrollTo(0, sessionStorage.getItem("scrollY"));
+        }
+      });
+      })();
+      window.addEventListener("beforeunload", () => {
+        sessionStorage.setItem("scrollY", window.scrollY);
+      });
       
     },
     
@@ -206,7 +219,7 @@ export default {
 
 #index-top #top-Line span {display: inline-block;}
 
-#index-service {margin-top: 6rem;}
+#Index section#index-service {padding-top: 12.5rem;margin-top: -6.25rem;}
 #index-service .wrapper {margin-top: 5rem;}
 #index-service .container {margin-bottom: 6rem;}
 #index-service .container:nth-of-type(4) {margin-bottom: 0;}
@@ -214,25 +227,24 @@ export default {
 #index-service .container h2 {margin: 1.75rem 0 .5rem;}
 
 
-#index-projects {margin-top: 12.5rem;}
+#Index section#index-projects {padding-top: 12.5rem;}
 #index-projects .wrapper {margin-top: 3rem;}
 #index-projects .reveal {
   width: 100%;
   height: 60vw;
   mix-blend-mode: normal;
 }
-
 #index-projects .container {margin-bottom: 6rem;}
-
 #index-projects .container h1 {margin: 0.6rem 0 0.6rem;}
 #index-projects .container h2 {margin-top: 1.5rem;}
-
 #index-projects .container img {
   width: 100%;
   height: 100%;
   mix-blend-mode: normal;
   transition: .3s ease-in-out;
 }
+
+#index-projects .container:nth-of-type(1) {pointer-events: none;}
 
 
 @media screen and (min-width: 720px) {
@@ -241,19 +253,12 @@ export default {
     padding-left: 21.5%;
     padding-right: 10%;
   }
-  #Index #luxy {z-index: 3;}
+
+  .circles {top: 50%;}
+  .circles div {width: 30vw;height: 30vw;}
   
   .bg {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;left: 0;
-    z-index: 1;
-    background-attachment: fixed;
     background-image: url("assets/image/bg@.jpg");
-    background-position: top left;
-    background-size: 100%;
-    background-repeat: no-repeat;
   }
 
   #index-top {padding-top: 28.25rem;}
@@ -272,15 +277,18 @@ export default {
   #index-projects {margin-top: 12.5rem;}
   #index-projects .wrapper {
     margin-top: 5rem;
-    display: grid;
-    grid-template-rows: 40vh 40vh 40vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
   }
   #index-projects .wrapper a {
+    width: 49.5%;
     position: relative;
-    height: 40vh;}
-  #index-projects .wrapper img {height: 100%;}
+    }
+  #index-projects .wrapper img {
+    aspect-ratio: 3/2;
+    height: 100%;}
   #index-projects .box {
     padding-left: 3rem;
     padding-bottom: 2.5rem;
@@ -288,27 +296,8 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    opacity: 0;
     transition: .5s .15s ease-in-out;}
 #index-projects .container:hover {opacity: 1;}
-#index-projects .container:hover .box {
-  opacity: 1;
-  transition: .5s ease-in-out;}
-#index-projects .container:hover img {
-  filter: brightness(.75) contrast(1.15);
-  transform: translateY(-50%) scale(1.025);
-}
-  #index-projects a:nth-of-type(2), #i2 a:nth-of-type(4) {pointer-events: none;}
-  #index-projects .container:nth-of-type(1) {grid-row: 1;grid-column: 1/ 3;}
-  #index-projects .container:nth-of-type(4) {grid-row: 2;grid-column: 2/ 4;}
-
-
-  #index-projects .container:nth-of-type(1) h2 {margin-top: 1.5rem;}
-  #index-projects .container:nth-of-type(1) h3 {
-    display: block;
-    font-size: 1.4rem;
-    margin: 0.3rem 0 0.4rem;
-  }
 
 }
 

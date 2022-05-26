@@ -1,17 +1,35 @@
 
-if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches) {
+//if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches) {
 
     //SP Animation
     const tl = gsap.timeline()
     //tl.set("main", { autoAlpha: 0 });
     tl.set(".bg", { opacity: 0 });
-    tl.set("body", { backgroundColor: "#FFFFFF" });
+    tl.set("body", { opacity: 0, backgroundColor: "#FFFFFF" });
     tl.set("hr", { width: 0 });
+    tl.set(".Logo", { opacity: 0, color: "black" });
+    
+    
+    tl.from("body", {
+      opacity: 0,
+      duration: .5,
+    }, "op");
+
+    tl.from(".Logo", {
+      opacity: 0,
+      x: 5,
+      ease: "power4.inOut",
+      duration: 1}, "op");
 
     tl.from("body", {
       backgroundColor: "#FFFFFF",
       ease: "power3.inOut",
       duration: 3,}, "op+=1");
+
+    tl.to(".Logo", {
+      color: "white",
+      ease: "power4.inOut",
+      duration: 6}, "op+=1");
 
     tl.from("section", {
       autoAlpha: 0,
@@ -27,15 +45,16 @@ if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches)
       //width: "105%",
       opacity: 0,
       ease: "power4.inOut",
-      duration: 3,}, "op+=2.5");
+      duration: 2.5,}, "op+=2");
 
     tl.from("#top-Line span", {
       //width: "105%",
       opacity: 0,
       y: 5,
-      stagger: .035,
+      stagger: .04,
+      skewX: -5,
       ease: "power4.inOut",
-      duration: 3,}, "op+=1");
+      duration: 2.75,}, "op+=.7");
 
     tl.from("#index-top h2", {
       //width: "105%",
@@ -46,22 +65,22 @@ if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches)
 
     tl.from("#index-top .wrapper .orange", {
       opacity: 0,
-      x: 5,
+      x: 3,
       ease: "power4.inOut",
-      duration: 3,}, "op+=3");
+      duration: 3,}, "op+=2.5");
 
     tl.from("#index-top .wrapper a", {
       opacity: 0,
-      x: 5,
+      y: 3,
       ease: "power4.inOut",
-      duration: 2.5,}, "op+=3");
+      duration: 2.5,}, "op+=2");
 
     tl.from("#Header hr", {
       opacity: .25,
       width: 0,
       stagger: .25,
       ease: "power4.inOut",
-      duration: 2.5,}, "op+=.5");
+      duration: 4,}, "op+=.1");
 
     tl.from(".circles .circle-1", {
       marginRight: "-21.25vw",
@@ -75,9 +94,9 @@ if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches)
       
       
     
-  } else {
+  //} else {
 
-    const tl = gsap.timeline()
+    //const tl = gsap.timeline()
     //tl.set("#top-Visual", { width: "100vw" });
     /*
     tl.from("#work-top .container", {
@@ -92,7 +111,7 @@ if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches)
     });
     */
 
-}
+//}
 
 
 

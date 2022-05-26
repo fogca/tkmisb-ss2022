@@ -26,7 +26,10 @@
 	box-sizing: border-box;
 }
 
-html {font-size: 62.5%;}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
 html, body {
     width: 100vw;
     overflow-x: hidden;
@@ -87,7 +90,7 @@ img {
 }
 
 .heading {font-size: 3.2rem;}
-.orange {color: #E34600;}
+.orange, #s2 .body h4, .section-header small {color: #E65000; filter: saturate(1.5);}
 
 
 

@@ -6,12 +6,22 @@
     'scrolled': headerHiddenFlag,
     'is-top': headerTopFlag }" 
   >
-    <nuxt-link to="/" aria-label="Home"><Logo /></nuxt-link>
+
+    <a href="/" aria-label="Home"><Logo /></a>
 
     <hr>
     
     <ul>
-      <li><a lang="en" href="/#index-contact">Service</a></li>
+      <li><a lang="en" href="/#index-service">Service</a></li>
+      <!--
+      <li>
+        <nuxt-link 
+        to="#"
+        v-scroll-to="{
+          el: '#index-service',
+          onStart: hideModal
+        }">Service</nuxt-link>
+      </li>-->
       <li><a lang="en" href="/#index-projects">Projects</a></li>
       <li><a lang="en" href="/#index-about">About me</a></li>
       <li><a lang="en" href="/#index-inhouse">in house</a></li>
@@ -89,7 +99,7 @@ header.is-top {
   background: transparent;
 }
 
-header.scrolled {transform: translateY(-64px);}
+header.scrolled {transform: translateY(-55px);}
 
 header {
   width: 100%;
