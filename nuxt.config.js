@@ -59,7 +59,7 @@ export default {
     //{ src: '~/plugins/axios.js', ssr: false }
     //{ src: '~/plugins/luxy', ssr: false }
     { src: '~/plugins/adobe-fonts', ssr: false },
-    { src: '~/plugins/vue-scrollto', ssr: false }
+    //{ src: '~/plugins/vue-scrollto', ssr: false }
     
   ],
 

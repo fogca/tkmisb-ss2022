@@ -2,16 +2,25 @@
 
 
 @font-face {
-    font-family: 'Lausanne';
+    font-family: 'Lausanne-350';
     src: url('assets/font/TWKLausanne-350.woff2') format('woff2');
 }
+@font-face {
+    font-family: 'Lausanne-400';
+    src: url('assets/font/TWKLausanne-400.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Lausanne-450';
+    src: url('assets/font/TWKLausanne-450.woff2') format('woff2');
+}
+
 
 
 #fontplus-trial-banner {display: none;}
 
 :root {
-    --backgroundColor: #0A0A0A;
-    --textColor: #FFFFFF;
+    --backgroundColor: #E3E3E3;
+    --textColor: #140505;
     --bodyColor: #58582D;
     --gray: #D8D8D8;
     --mainColor: #88B82B;
@@ -37,11 +46,10 @@ html, body {
 }
 
 @media screen and (max-width: 480px) {
-    html {font-size: 55%;}
 }
 
 div, h1, h2, h3, h4, h5, h6, p, a, span, button {
-    font-family: "Lausanne", TsukuGoPro-B, TazuganeGothicStdN-Medium, sans-serif;
+    font-family: "Lausanne-350", TsukuOldGothicStd-B, sans-serif;
     font-weight: 300;
     color: var(--textColor);
     font-display: swap;
@@ -52,7 +60,7 @@ div, h1, h2, h3, h4, h5, h6, p, a, span, button {
 }
 
 :lang(en) {
-    letter-spacing: -.03em;
+    letter-spacing: -.015em;
     line-height: 1.4;
     -webkit-font-smoothing: antialiased;
 }

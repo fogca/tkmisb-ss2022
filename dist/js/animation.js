@@ -5,7 +5,7 @@
     const tl = gsap.timeline()
     //tl.set("main", { autoAlpha: 0 });
     tl.set(".bg", { opacity: 0 });
-    tl.set("body", { opacity: 0, backgroundColor: "#FFFFFF" });
+    //tl.set("body", { opacity: 0, backgroundColor: "#FFFFFF" });
     tl.set("hr", { width: 0 });
     tl.set(".Logo", { opacity: 0, color: "black" });
     
@@ -21,77 +21,40 @@
       ease: "power4.inOut",
       duration: 1}, "op");
 
-    tl.from("body", {
-      backgroundColor: "#FFFFFF",
-      ease: "power3.inOut",
-      duration: 3,}, "op+=1");
-
-    tl.to(".Logo", {
-      color: "white",
-      ease: "power4.inOut",
-      duration: 6}, "op+=1");
-
-    tl.from("section", {
-      autoAlpha: 0,
-      ease: "power4.inOut",
-      duration: 2,}, "op+=1");
-
-    tl.from(".circles", {
-      opacity: 0,
-      ease: "power2.inOut",
-      duration: 2,}, "op");
-
-    tl.from(".bg", {
-      //width: "105%",
-      opacity: 0,
-      ease: "power4.inOut",
-      duration: 2.5,}, "op+=2");
-
     tl.from("#top-Line span", {
       //width: "105%",
       opacity: 0,
       y: 5,
-      stagger: .04,
-      skewX: -5,
-      ease: "power4.inOut",
-      duration: 2.75,}, "op+=.7");
+      stagger: .025,
+      filter: "blur(5px)",
+      ease: "power3.inOut",
+      duration: 3.5,}, "op+=.5");
 
     tl.from("#index-top h2", {
-      //width: "105%",
       opacity: 0,
-      y: 3,
-      ease: "power4.inOut",
-      duration: 3,}, "op+=3");
+      y: 7,
+      filter: "blur(5px)",
+      ease: "power3.inOut",
+      duration: 3.5,}, "op+=1");
 
-    tl.from("#index-top .wrapper .orange", {
-      opacity: 0,
-      x: 3,
-      ease: "power4.inOut",
+    tl.from("#index-projects .img-box", {
+      autoAlpha: 0,
+      width: 50,
+      ease: "power2.in",
       duration: 3,}, "op+=2.5");
 
-    tl.from("#index-top .wrapper a", {
+    tl.from("#index-projects .container .img-box img", {
+      scale: 1.25,
+      ease: "Power1.easeOut",
+      duration: 3,}, "op+=2.75");
+
+    tl.from("#index-projects .container .box *", {
       opacity: 0,
-      y: 3,
-      ease: "power4.inOut",
-      duration: 2.5,}, "op+=2");
+      x: 5,
+      stagger: .5,
+      ease: "Power1.easeOut",
+      duration: 3,}, "op+=3.5");
 
-    tl.from("#Header hr", {
-      opacity: .25,
-      width: 0,
-      stagger: .25,
-      ease: "power4.inOut",
-      duration: 4,}, "op+=.1");
-
-    tl.from(".circles .circle-1", {
-      marginRight: "-21.25vw",
-      ease: "power4.inOut",
-      duration: 2.5,}, "op+=2.5");
-
-    tl.from(".circles .circle-2", {
-      marginLeft: "-21.25vw",
-      ease: "power4.inOut",
-      duration: 2.5,}, "op+=2.5");
-      
       
     
   //} else {

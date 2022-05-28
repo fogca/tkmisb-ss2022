@@ -1,6 +1,5 @@
 <template>
     <main>
-      <div class="bg"></div>
         <section id="s1">
           <img :src="archive.thumbnail.url" class="thumbnail" :alt="archive.title">
             <h1 lang="en" class="h2">{{ archive.title }}</h1>
@@ -238,7 +237,6 @@ export default {
   width: 100vw;
   margin-left: -8.25vw;}
 #s1 h1 {
-  text-transform: capitalize;
   font-size: 2.6rem;
   margin-top: 3rem;
 }

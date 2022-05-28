@@ -8,25 +8,13 @@
   >
 
     <a href="/" aria-label="Home"><Logo /></a>
-
-    <hr>
     
     <ul>
-      <li><a lang="en" href="/#index-service">Service</a></li>
-      <!--
-      <li>
-        <nuxt-link 
-        to="#"
-        v-scroll-to="{
-          el: '#index-service',
-          onStart: hideModal
-        }">Service</nuxt-link>
-      </li>-->
+      <li><a lang="en" href="/#index-service">Services</a></li>
       <li><a lang="en" href="/#index-projects">Projects</a></li>
       <li><a lang="en" href="/#index-about">About me</a></li>
-      <li><a lang="en" href="/#index-inhouse">in house</a></li>
+      <li><a lang="en" href="https://www.instagram.com/takumiisobe_/" target="blank_">Instagram</a></li>
     </ul>
-
     <hr>
     <!--
     <button
@@ -95,11 +83,13 @@ export default {
 }
 
 header.is-top {
-  padding-top: 1.5rem;
+  padding-top: 3rem;
   background: transparent;
 }
 
-header.scrolled {transform: translateY(-55px);}
+header.is-top ul, header.is-top hr {display: none;}
+
+header.scrolled {transform: translateY(-59px);}
 
 header {
   width: 100%;
@@ -108,7 +98,7 @@ header {
   transition: 1s ease-in-out;
   z-index: 99;
   padding: 2rem 8.25vw 0;
-  background: #0D0D12;
+  background: var(--backgroundColor);
 }
 
 header hr {
