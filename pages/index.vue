@@ -24,7 +24,7 @@
           </div>
 
           <div class="box">
-            <h2 lang="en" class="h5">{{ content.direction }}</h2>
+            <h2 lang="en" class="h6">{{ content.direction }}</h2>
             <h1 lang="en" class="h2">{{ content.title }}</h1>
             <h3 lang="en" class="h6 semitrans">{{ content.work }}</h3>
           </div>
@@ -113,6 +113,32 @@ export default {
         console.log("[error]load FONTPLUS.")
       }
 
+      document.getElementById('circle-color').addEventListener('click', () => {
+        const currentPos = window.pageYOffset && document.documentElement.scrollTop 
+        if (currentPos > 300) {
+          document.documentElement.style.setProperty('--backgroundColor', '#090909');
+          document.documentElement.style.setProperty('--textColor', '#e3e3e3');
+        } else {
+          document.documentElement.style.setProperty('--backgroundColor', '#e3e3e3');
+          document.documentElement.style.setProperty('--textColor', '#090909');
+        }
+        //startPos = currentPos
+      })
+
+      /*
+      window.addEventListener('scroll', () => {
+        const currentPos = window.pageYOffset && document.documentElement.scrollTop 
+        if (currentPos > 300) {
+          document.documentElement.style.setProperty('--backgroundColor', '#090909');
+          document.documentElement.style.setProperty('--textColor', '#e3e3e3');
+        } else {
+          document.documentElement.style.setProperty('--backgroundColor', '#e3e3e3');
+          document.documentElement.style.setProperty('--textColor', '#090909');
+        }
+        //startPos = currentPos
+      })
+      */
+      
       gsap.registerPlugin(ScrollTrigger);
       this.Animation();
 

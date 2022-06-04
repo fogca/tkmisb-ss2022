@@ -11,7 +11,7 @@ body * {animation: text 5s ease-in-out;}
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
-span, p, .Logo {mix-blend-mode: difference;}
+span, p, .Logo path {mix-blend-mode: difference;}
 
 
 .circles .circle-1 {animation: circle1 10s 5.5s cubic-bezier(.8,0,0,.8) infinite;}

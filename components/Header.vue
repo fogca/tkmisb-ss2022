@@ -4,10 +4,18 @@
   :class="{
     'is-active': isActiveMenu, 
     'scrolled': headerHiddenFlag,
-    'is-top': headerTopFlag }" 
+    'is-top': headerTopFlag,
+    'scroll-up': headerScrollUp}" 
   >
 
+  <div class="sp-top">
+    <div class="circles" id="circle-color">
+      <div class="circle"></div><div class="circle"></div>
+      <div class="circle"></div><div class="circle"></div>
+      <div class="circle"></div><div class="circle"></div>
+    </div>
     <a href="/" aria-label="Home"><Logo /></a>
+  </div>
     
     <ul>
       <li><a lang="en" href="/#index-service">Services</a></li>
@@ -15,7 +23,6 @@
       <li><a lang="en" href="/#index-about">About me</a></li>
       <li><a lang="en" href="https://www.instagram.com/takumiisobe_/" target="blank_">Instagram</a></li>
     </ul>
-    <hr>
     <!--
     <button
       type="button"
@@ -42,7 +49,8 @@ export default {
     return {
       isActiveMenu: false,
       headerHiddenFlag: false,
-      headerTopFlag: true
+      headerTopFlag: true,
+      colorActive: true
     }
   },
   mounted() {
@@ -51,6 +59,7 @@ export default {
     window.addEventListener('scroll', () => {
       const currentPos = window.pageYOffset && document.documentElement.scrollTop 
       this.headerHiddenFlag = currentPos > startPos && currentPos > 15
+      this.headerScrollUp = currentPos < startPos && currentPos
       startPos = currentPos
     })
     //Remove class;is-top from header when it is scolled from top
@@ -82,14 +91,31 @@ export default {
   z-index: 99;
 }
 
-header.is-top {
-  padding-top: 3rem;
-  background: transparent;
+header.is-top {padding-top: 3rem;background-color: transparent;}
+
+header .circles {display: flex;}
+header .circles .circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-left: -.5rem;
+  position: relative;
 }
+header .circles .circle:nth-of-type(2n+1) {
+  border: 1px solid var(--textColor);
+  background: var(--backgroundColor);
+}
+header .circles .circle:nth-of-type(2n) {
+  border: 1px solid var(--textColor);
+  background: var(--textColor);
+}
+header .circles .circle:nth-of-type(1) {z-index: 10;}
+header .circles .circle:nth-of-type(2) {z-index: 9;}
+header .circles .circle:nth-of-type(3) {z-index: 8;}
+header .circles .circle:nth-of-type(4) {z-index: 7;}
+header .circles .circle:nth-of-type(5) {z-index: 6;}
+header .circles .circle:nth-of-type(6) {z-index: 5;}
 
-header.is-top ul, header.is-top hr {display: none;}
-
-header.scrolled {transform: translateY(-59px);}
 
 header {
   width: 100%;
@@ -97,45 +123,38 @@ header {
   top: 0;
   transition: 1s ease-in-out;
   z-index: 99;
-  padding: 2rem 8.25vw 0;
+  padding: 2rem 8.25vw .5rem;
   background: var(--backgroundColor);
 }
-
-header hr {
-  width: 100vw;
-  margin-left: -8.25vw;
-  background: white;
-  border: solid .3px white;
-}
-
-header hr:nth-of-type(1) {margin-top: 1.3rem;}
-header hr:nth-of-type(2) {margin-top: 1.3rem;}
+header .sp-top {      
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;}
 
 header ul {
   margin-top: 1.2rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  transition: 1s ease-in-out;
 }
-header ul li a {font-size: 1.6rem;}
+header.is-top ul {opacity: 0;}
+header.scrolled {
+  transform: translateY(-42.5px);
+  padding-bottom: 1rem;
+}
+header.scroll-up {transform: translateY(-42.5px);}
+header ul li a {
+  font-size: 1.6rem;
+  -webkit-font-smoothing: subpixel-antialiased;}
 header ul li div {opacity: .5;font-size: 1.2rem;}
-
-
-header #Path_1603 {opacity: 0;}
-header.is-top #Path_1603 {opacity: 1;}
 
 
 
 header .Logo {
-  margin-left: -0.5rem;
   font-size: 2rem;
   transition: .5s;
 }
-header #Path_1603 {transition: .3s ease-in-out;}
-header.scrolled #Path_1603 {opacity: 0;}
-
-header .Logo path {transition: 1s ease-in-out;}
-header .Logo:hover path {fill: var(--textColor);}
 
 .button-menu {
     width: 5rem;
@@ -157,7 +176,7 @@ header .Logo:hover path {fill: var(--textColor);}
 header.is-active .button-menu svg:nth-of-type(1) {opacity: 0;}
 header.is-active .button-menu svg:nth-of-type(2) {opacity: 1;}
 header a {transition: 0s;}
-header.is-active * {fill: var(--textColor);}
+/*header.is-active * {fill: var(--textColor);}*/
 
 .nav {
   width: 100vw;

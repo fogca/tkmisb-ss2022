@@ -7,7 +7,7 @@
     tl.set(".bg", { opacity: 0 });
     //tl.set("body", { opacity: 0, backgroundColor: "#FFFFFF" });
     tl.set("hr", { width: 0 });
-    tl.set(".Logo", { opacity: 0, color: "black" });
+    tl.set(".Logo path", { opacity: 0, color: "black" });
     
     
     tl.from("body", {
@@ -15,45 +15,53 @@
       duration: .5,
     }, "op");
 
-    tl.from(".Logo", {
+    tl.from(".Logo path", {
+      opacity: 0,
+      y: 5,
+      stagger: .05,
+      ease: "power4.inOut",
+      duration: 2}, "op+=1");
+
+    tl.from(".circle", {
       opacity: 0,
       x: 5,
+      stagger: .1,
       ease: "power4.inOut",
-      duration: 1}, "op");
+      duration: 2.5}, "op+=1");
 
     tl.from("#top-Line span", {
       //width: "105%",
       opacity: 0,
       y: 5,
-      stagger: .025,
-      filter: "blur(5px)",
-      ease: "power3.inOut",
-      duration: 3.5,}, "op+=.5");
+      stagger: .08,
+      filter: "blur(3px)",
+      ease: "power2.inOut",
+      duration: 2.5,}, "op");
 
     tl.from("#index-top h2", {
       opacity: 0,
       y: 7,
       filter: "blur(5px)",
-      ease: "power3.inOut",
-      duration: 3.5,}, "op+=1");
+      ease: "power2.inOut",
+      duration: 2.5,}, "op+=.1");
 
     tl.from("#index-projects .img-box", {
       autoAlpha: 0,
       width: 50,
       ease: "power2.in",
-      duration: 3,}, "op+=2.5");
+      duration: 2.5,}, "op+=1");
 
     tl.from("#index-projects .container .img-box img", {
       scale: 1.25,
       ease: "Power1.easeOut",
-      duration: 3,}, "op+=2.75");
+      duration: 2.5,}, "op+=1.25");
 
     tl.from("#index-projects .container .box *", {
       opacity: 0,
       x: 5,
       stagger: .5,
       ease: "Power1.easeOut",
-      duration: 3,}, "op+=3.5");
+      duration: 2.5,}, "op+=1.5");
 
       
     

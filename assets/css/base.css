@@ -13,6 +13,15 @@
     font-family: 'Lausanne-450';
     src: url('assets/font/TWKLausanne-450.woff2') format('woff2');
 }
+@font-face {
+    font-family: 'Aa';
+    src: url('assets/font/Astro-45.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'AA';
+    src: url('assets/font/Astro-50.woff2') format('woff2');
+}
+
 
 
 
@@ -43,13 +52,14 @@ html, body {
     width: 100vw;
     overflow-x: hidden;
     background-color: var(--backgroundColor);
+    transition: 1s ease-in-out;
 }
 
 @media screen and (max-width: 480px) {
 }
 
 div, h1, h2, h3, h4, h5, h6, p, a, span, button {
-    font-family: "Lausanne-350", TsukuOldGothicStd-B, sans-serif;
+    font-family: "AA", "Lausanne-350", TsukuOldGothicStd-B, sans-serif;
     font-weight: 300;
     color: var(--textColor);
     font-display: swap;
