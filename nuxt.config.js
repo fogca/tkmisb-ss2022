@@ -3,7 +3,7 @@ export default {
   pageTransition: 'fade',
 
   // Target: https://go.nuxtjs.dev/config-target
-  mode: 'universal',
+  //mode: 'universal',
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -96,7 +96,7 @@ export default {
     "@nuxtjs/axios",
     '@nuxtjs/sitemap',
     '@nuxtjs/pwa',
-    '@nuxtjs/color-mode'
+    //'@nuxtjs/color-mode'
   ],
   sitemap: {
     path: '/sitemap.xml',
