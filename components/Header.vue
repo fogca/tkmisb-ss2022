@@ -18,9 +18,9 @@
   </div>
     
     <ul>
-      <li><a lang="en" href="/#index-service">Services</a></li>
       <li><a lang="en" href="/#index-projects">Projects</a></li>
       <li><a lang="en" href="/#index-about">About me</a></li>
+      <li><a lang="en" href="/#index-laboratory">Laboratory</a></li>
       <li><a lang="en" href="https://www.instagram.com/takumiisobe_/" target="blank_">Instagram</a></li>
     </ul>
     <!--
@@ -121,7 +121,7 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
-  transition: 1s ease-in-out;
+  transition: 1s transform ease-in-out;
   z-index: 99;
   padding: 2rem 8.25vw .5rem;
   background: var(--backgroundColor);

@@ -52,7 +52,11 @@ html, body {
     width: 100vw;
     overflow-x: hidden;
     background-color: var(--backgroundColor);
-    transition: 1s ease-in-out;
+}
+
+.dark-mode body {
+  background-color: #091a28;
+  color: #ebf4f1;
 }
 
 @media screen and (max-width: 480px) {
@@ -86,7 +90,7 @@ h5, .h5 {font-size: 1.4rem;}
 h6, .h6 {font-size: 1.2rem;}
 
 p, .p {
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.85;
     font-size: 1.35rem;
     letter-spacing: 0.025em;

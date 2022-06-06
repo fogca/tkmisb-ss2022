@@ -4,12 +4,14 @@
     <section id="index-top">
       <div class="wrapper">
         <h1 class="h2" lang="en" id="top-Line">
-          <span>As a companion partner of the </span><br>
-          <span>brand that continues to challenge, </span><br>
-          <span>we will support from the visual </span><br>
-          <span>area to the creative area.</span>
+          <span class="pc">
+          <span class="sp">As a companion partner of the </span>
+          <span class="sp">brand that continues to challenge, </span></span><br>
+          <span class="pc">
+          <span class="sp">we will support from the visual </span>
+          <span class="sp">area to the creative area.</span></span>
         </h1>
-        <h2 class="h6">挑戦し続けるブランドのパートナーとして、<br>視覚領域からクリエイティブ領域までを伴走し、<br>顧客の元に届くまで、様々な形で支援を行います。</h2>
+        <h2 class="h6">挑戦し続けるブランドのパートナーとして、<br class="sp">視覚領域から<br class="pc">クリエイティブ領域までを伴走し、<br class="sp">顧客の元に届くまで、様々な形で支援を行います。</h2>
       </div>
     </section>
 
@@ -40,28 +42,41 @@
       <div class="wrapper">
         <div class="container">
           <div class="box">
-            <div class="h2 year" lang="en">2020</div>
-            <div class="h3"><span class="h2" lang="en">University of Westminster</span> 入学</div>
+            <div class="h3 year" lang="en">2020</div>
+            <div class="h4"><span class="h3" lang="en">University of Westminster</span> 入学</div>
           </div>
           <div class="box">
-            <div class="h2 year" lang="en">2021</div>
-            <div class="h3">大学休学 - クリエイティブスタジオにて<br>視覚領域における実務経験を積む</div>
+            <div class="h3 year" lang="en">2021</div>
+            <div class="h4">大学休学 - クリエイティブスタジオにて<br>視覚領域における実務経験を積む</div>
           </div>
           <div class="box">
-            <div class="h2 year" lang="en">2020</div>
-            <div class="h3"><span class="h2" lang="en">University of Westminster</span> 入学</div>
+            <div class="h3 year" lang="en">2020</div>
+            <div class="h4"><span class="h3" lang="en">University of Westminster</span> 入学</div>
           </div>
         </div>
-        <p class="h3">
+        <p class="">
           ロンドンUniversity of Westminsterにて経営学を専攻・在学中。オーストラリアやイギリスで生活していく中で、日本との視覚表現の違いや感じ方の相違に興味を抱き、グラフィックデザイン・UIデザイン・写真・動画を始める。休暇の度に帰国しては、日本文化や思考の心地良さを体感し、伝統工芸や日本文化に興味を持ち始める。<br><br>
           また大学を休学し、東京のクリエイティブスタジオにて実務経験を積む。現在はグラフィックデザイン・UIデザイン・ビジュアルの撮影に加え、Webサイト・アプリの構築・テクニカルディレクションを行う。Web領域においては、モダンウェブアーキテクチャとも呼ばれる、JAMStackでの構築を多く手掛け、従来の一般的なCMSを使用しない、ユーザー・クライアント・デベロッパーフレンドリーなワークフローに注力している。(主に使用するフレームワークはVue.js / Nuxt.js)
         </p>
         <a href="
         mailto:hi@takumiisobe.com?subject=お問い合わせ&body=この度はお問い合わせをいただきまして、%0D%0A誠にありがとうございます。%0D%0A%0D%0A%0D%0A【お名前】%0D%0A%0D%0A%0D%0A【メールアドレス】%0D%0A%0D%0A%0D%0A【お問い合わせの内容】%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A上記をご記入の上、本メールを送信していただけますと幸いに存じます。%0D%0A順次ご対応させていただきます。%0D%0A%0D%0Aどうぞ、よろしくお願いいたします。%0D%0A%0D%0A%0D%0A磯部たくみ
-        " class="mail">メールのお問い合わせ</a>
+        " class="mail h4">メールのお問い合わせ</a>
       </div>
 
     </section>
+
+
+    <section id="index-laboratory">
+      <div class="section-header">
+        <h1 lang="en" class="heading">Laboratory</h1>
+        <h2 class="h5">発酵・熟成・蒸留の実験場</h2>
+      </div>
+      <div class="wrapper">
+        <h3 class="kanro"><Kanro /></h3>
+      </div>
+    </section>
+
+
     <section id="index-inhouse"></section>
     <section id="index-contact"></section>
     <section id="index-instagram"></section>
@@ -210,6 +225,8 @@ export default {
 
 
 #Index section#index-about {padding-top: 10rem;margin-top: -2.5rem;}
+
+
 #index-about .wrapper {margin-top: 4rem;}
 #index-about .wrapper .container .box {
   display: flex;
@@ -221,7 +238,6 @@ export default {
 #index-about .wrapper .container .box div:nth-of-type(1) {margin-right: 2.5rem;}
 #index-about .wrapper p {margin-top: 4rem;}
 
-#index-about .wrapper a {font-size: 2rem;}
 #index-about .wrapper a.mail {position:relative;margin-top: 4rem;}
 
 #index-about .wrapper a.mail::after {
@@ -251,6 +267,10 @@ export default {
 
 
 
+#Index section#index-laboratory {padding-top: 10rem;}
+
+
+
 
 
 
@@ -270,38 +290,41 @@ export default {
     background-image: url("assets/image/bg@.jpg");
   }
 
-  #index-top {padding-top: 28.25rem;}
-  #index-top .wrapper {
-    margin-top: 5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  #index-top .wrapper p {width: 47.5%;}
-  #index-top .wrapper p:nth-of-type(1) {font-size: 1.48rem;line-height: 2;}
-  #index-top .wrapper p:nth-of-type(2) {font-size: 1.8rem;line-height: 1.6;}
-  #index-top h3 {margin-top: 1rem;line-height:2;}
+  #Index section#index-top {    
+    margin-top: 11.25vh;
+    padding-top: 11.25vh;}
+  
+  #index-top .wrapper h1 {font-size: 2.4rem;}
+  #index-top .wrapper h2 {
+    font-size: 1.8rem;
+    line-height: 2;
+    margin-top: 1rem;}
 
 
-  #index-projects {margin-top: 12.5rem;}
+
+
+  #Index section#index-projects {padding-top: 12.5rem;}
+
   #index-projects .wrapper {
-    margin-top: 5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
   }
-  #index-projects .wrapper a {
-    width: 49.5%;
-    position: relative;
-    }
+  #index-projects .wrapper a {width: 47.5%;position: initial;}
+  #index-projects .container .img-box {width: 100%;min-height: initial;}
+
+
+
+
+
   #index-projects .wrapper img {
     aspect-ratio: 3/2;
     height: 100%;}
   #index-projects .box {
     padding-left: 3rem;
     padding-bottom: 2.5rem;
-    position: relative;
+    position: initial;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

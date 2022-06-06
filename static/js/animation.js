@@ -49,12 +49,12 @@
       autoAlpha: 0,
       width: 50,
       ease: "power2.in",
-      duration: 2.5,}, "op+=1");
+      duration: 2,}, "op+=1");
 
     tl.from("#index-projects .container .img-box img", {
       scale: 1.25,
-      ease: "Power1.easeOut",
-      duration: 2.5,}, "op+=1.25");
+      ease: "Power1.Out",
+      duration: 2.5,}, "op+=1");
 
     tl.from("#index-projects .container .box *", {
       opacity: 0,
@@ -85,10 +85,32 @@
 //}
 
 
+let url = location.href;
+if (url == "https://tkmisb-ss2022.pages.dev/") {
+let body = document.querySelector('body');
+gsap.registerPlugin(ScrollTrigger);
+let tlAn = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#index-about",
+    //markers: true,
+    start: 'top center-=5%',
+    toggleActions: "restart none none reverse"
+  }
+});
+
+//tlAn.set("#index-about", { background: "white" });
+tlAn.to("body, header", {
+  backgroundColor: "black",
+  ease: "Power2.inOut",
+  duration: 1.5,},"about");
+
+tlAn.to("*",{
+  color: "white",
+  ease: "Power2.inOut",
+  duration: 1.5,},"about");
 
 
-
-
+}
 
 
 
