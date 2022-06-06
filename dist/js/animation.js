@@ -1,8 +1,7 @@
+const tl = gsap.timeline()
 
-//if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches) {
 
-    //SP Animation
-    const tl = gsap.timeline()
+
     //tl.set("main", { autoAlpha: 0 });
     tl.set(".bg", { opacity: 0 });
     //tl.set("body", { opacity: 0, backgroundColor: "#FFFFFF" });
@@ -45,11 +44,7 @@
       ease: "power2.inOut",
       duration: 2.5,}, "op+=.1");
 
-    tl.from("#index-projects .img-box", {
-      autoAlpha: 0,
-      width: 50,
-      ease: "power2.in",
-      duration: 2,}, "op+=1");
+
 
     tl.from("#index-projects .container .img-box img", {
       scale: 1.25,
@@ -63,26 +58,30 @@
       ease: "Power1.easeOut",
       duration: 2.5,}, "op+=1.5");
 
-      
+if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches) {
+
+  tl.from("#index-projects .img-box", {
+    autoAlpha: 0,
+    width: 50,
+    ease: "power2.in",
+    duration: 2,}, "op+=1");
     
-  //} else {
+  } else {
 
-    //const tl = gsap.timeline()
-    //tl.set("#top-Visual", { width: "100vw" });
-    /*
-    tl.from("#work-top .container", {
-        //width: "105%",
-        autoAlpha: 0,
-        filter: "saturate(0)",
-        //y: 10,
-        x: -3,
-        ease: "power2.inOut",
-        stagger: .25,
-        duration: 3,
-    });
-    */
 
-//}
+    tl.from("#index-projects .img-box", {
+      autoAlpha: 0,
+      ease: "power2.in",
+      duration: 2,}, "op+=1");
+
+  }
+
+
+
+
+
+
+
 
 
 let url = location.href;

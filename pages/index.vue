@@ -322,13 +322,15 @@ export default {
     aspect-ratio: 3/2;
     height: 100%;}
   #index-projects .box {
-    padding-left: 3rem;
+    padding-top: 1rem;
     padding-bottom: 2.5rem;
     position: initial;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     transition: .5s .15s ease-in-out;}
+#index-projects .box .h2 {font-size: 2.4rem;}
+
 #index-projects .container:hover {opacity: 1;}
 
 }

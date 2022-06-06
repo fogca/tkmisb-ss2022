@@ -353,6 +353,8 @@ export default {
 
 @media screen and (min-width: 720px) {
 
+  .Slug section {padding-left: 21.5%;}
+
   #s1 h1 {
     font-size: 4.2rem;
     margin-top: 22.5rem;}
@@ -364,13 +366,14 @@ export default {
   #s1 .wrapper dl {margin-right: 6rem;}
   #s1 .wrapper dl:nth-of-type(2) {max-width: 35%;margin-right: 5rem;}
   #s1 .thumbnail {    
-  width: 100%;
-  margin-left: 0;}
+    width: calc(100% + 8.25vw);
+    margin-left: 0;
+    aspect-ratio: 3/2;
+  }
 
   #s1 *, #s2 .body {
-    width: 65%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 90%;
+    margin-left: 0;
   }
   #s2 .body h1 {font-size: 3.6rem;}
   #s2 .body h4 {
