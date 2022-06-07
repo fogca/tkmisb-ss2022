@@ -32,7 +32,7 @@ const tl = gsap.timeline()
       //width: "105%",
       opacity: 0,
       y: 5,
-      stagger: .08,
+      stagger: .05,
       filter: "blur(3px)",
       ease: "power2.inOut",
       duration: 2.5,}, "op");
@@ -42,7 +42,7 @@ const tl = gsap.timeline()
       y: 7,
       filter: "blur(5px)",
       ease: "power2.inOut",
-      duration: 2.5,}, "op+=.1");
+      duration: 2.5,}, "op+=.65");
 
 
 
@@ -54,7 +54,7 @@ const tl = gsap.timeline()
     tl.from("#index-projects .container .box *", {
       opacity: 0,
       x: 5,
-      stagger: .5,
+      stagger: .25,
       ease: "Power1.easeOut",
       duration: 2.5,}, "op+=1.5");
 
@@ -74,6 +74,15 @@ if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches)
       ease: "power2.in",
       duration: 2,}, "op+=1");
 
+
+    tl.from("header ul li", {
+      autoAlpha: 0,
+      y: 5,
+      filter: "blur(5px)",
+      stagger: .2,
+      ease: "power2.inOut",
+      duration: 2,}, "op+=1");
+
   }
 
 
@@ -83,7 +92,7 @@ if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches)
 
 
 
-
+/*
 let url = location.href;
 if (url == "https://tkmisb-ss2022.pages.dev/") {
 let body = document.querySelector('body');
@@ -110,6 +119,8 @@ tlAn.to("*",{
 
 
 }
+
+*/
 
 
 

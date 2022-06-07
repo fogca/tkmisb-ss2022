@@ -21,7 +21,7 @@
       <li><a lang="en" href="/#index-projects">Projects</a></li>
       <li><a lang="en" href="/#index-about">About me</a></li>
       <li><a lang="en" href="/#index-laboratory">Laboratory</a></li>
-      <li class="pc"><a lang="en" href="/#index-contact">Contact</a></li>
+      <li class="pc"><a lang="en" href="/#index-contact" class="pc">Contact</a></li>
       <li><a lang="en" href="https://www.instagram.com/takumiisobe_/" target="blank_">Instagram</a></li>
     </ul>
     <!--
@@ -227,11 +227,16 @@ header a {transition: 0s;}
     padding-top: 7.5rem;
     padding-left: 5vw;
   }
+  header, header.is-top, header.scrolled {
+    background: transparent;
+    padding-top: 5rem;
+  }
+  header.scrolled {transform: translateY(-15px);}
 
   header ul {
     display: flex;
     flex-direction: column;
-    margin-top: 19vh;
+    margin-top: 16.5vh;
   }
   header.is-top ul {opacity: 1;}
 
@@ -241,8 +246,8 @@ header a {transition: 0s;}
   }
   header ul li a::after {
     display: block;
-    font-size: 1.25rem;
-    margin-top: .5rem;
+    font-size: 1.4rem;
+    margin-top: .15rem;
   }
   header ul li:nth-of-type(1) a::after {content: "手掛けたプロジェクト";}
   header ul li:nth-of-type(2) a::after {content: "磯部たくみについて";}
@@ -251,8 +256,8 @@ header a {transition: 0s;}
   header ul li:nth-of-type(5) a::after {content: "日々のコト";}
 
   header .circles .circle {
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
 }
