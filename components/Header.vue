@@ -224,7 +224,7 @@ header a {transition: 0s;}
   header {
     width: 21.5vw;
     height: 100vh;
-    padding: 5rem 1rem;
+    padding-top: 7.5rem;
     padding-left: 5vw;
   }
 
@@ -249,6 +249,11 @@ header a {transition: 0s;}
   header ul li:nth-of-type(3) a::after {content: "発酵と熟成と蒸留";}
   header ul li:nth-of-type(4) a::after {content: "お問い合わせ";}
   header ul li:nth-of-type(5) a::after {content: "日々のコト";}
+
+  header .circles .circle {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
 
 }
 
