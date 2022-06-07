@@ -5,10 +5,12 @@
             <h1 lang="en" class="h2">{{ archive.title }}</h1>
             <h2 lang="en" class="h5">{{ archive.description }}</h2>
             <div class="wrapper">
+              <!--
               <dl>
                 <dt lang="en" class="h5 semitrans">Primary Role</dt>
                 <dd lang="en" class="h4">{{ archive.direction }}</dd>
               </dl>
+              -->
               <dl>
                 <dt lang="en" class="h5 semitrans">Scope of Works</dt>
                 <dd lang="en" class="h4">{{ archive.work }}</dd>
@@ -356,22 +358,22 @@ export default {
   .Slug section {padding-left: 21.5%;}
 
   #s1 h1 {
-    font-size: 4.2rem;
-    margin-top: 22.5rem;}
-  #s1 h2 {font-size: 2.4rem;}
+    font-size: 2.8rem;
+    margin-top: 3rem;}
+  #s1 h2 {font-size: 1.8rem;}
 
   #s1 .wrapper {
     display: flex;
-    margin: 6rem 0 12rem;}
-  #s1 .wrapper dl {margin-right: 6rem;}
-  #s1 .wrapper dl:nth-of-type(2) {max-width: 35%;margin-right: 5rem;}
+    margin: 5rem 0 0;}
+  #s1 .wrapper dl {margin-right: 7.5rem;}
+  #s1 .wrapper dl:nth-of-type(1) {max-width: 45%;margin-right: 5.5rem;}
   #s1 .thumbnail {    
     width: calc(100% + 8.25vw);
     margin-left: 0;
-    aspect-ratio: 3/2;
+    aspect-ratio: 5/3;
   }
 
-  #s1 *, #s2 .body {
+  #s2 .body {
     width: 90%;
     margin-left: 0;
   }

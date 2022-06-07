@@ -21,6 +21,7 @@
       <li><a lang="en" href="/#index-projects">Projects</a></li>
       <li><a lang="en" href="/#index-about">About me</a></li>
       <li><a lang="en" href="/#index-laboratory">Laboratory</a></li>
+      <li class="pc"><a lang="en" href="/#index-contact">Contact</a></li>
       <li><a lang="en" href="https://www.instagram.com/takumiisobe_/" target="blank_">Instagram</a></li>
     </ul>
     <!--
@@ -220,6 +221,34 @@ header a {transition: 0s;}
 @media screen and (min-width: 720px) {
 
   header .Logo {width: 12rem;}
+  header {
+    width: 21.5vw;
+    height: 100vh;
+    padding: 5rem 1rem;
+    padding-left: 5vw;
+  }
+
+  header ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 19vh;
+  }
+  header.is-top ul {opacity: 1;}
+
+  header ul li a {
+    font-size: 2.2rem;
+    margin-bottom: 3.25rem;
+  }
+  header ul li a::after {
+    display: block;
+    font-size: 1.25rem;
+    margin-top: .5rem;
+  }
+  header ul li:nth-of-type(1) a::after {content: "手掛けたプロジェクト";}
+  header ul li:nth-of-type(2) a::after {content: "磯部たくみについて";}
+  header ul li:nth-of-type(3) a::after {content: "発酵と熟成と蒸留";}
+  header ul li:nth-of-type(4) a::after {content: "お問い合わせ";}
+  header ul li:nth-of-type(5) a::after {content: "日々のコト";}
 
 }
 

@@ -34,7 +34,7 @@ export default {
       { rel: 'index', href: 'https://takumiisobe.com/' },
       { rel: 'about', href: 'https://takumiisobe.com/about/' },
       { rel: 'contact', href: 'https://takumiisobe.com/contact/' },
-      { rel: 'icon', type: 'image/x-icon', href: '/takumiisobe_fav.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/fav.ico' }
     ],
     script: [
       { src: "/js/header.js", body: true },
