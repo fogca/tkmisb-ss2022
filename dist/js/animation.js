@@ -3,9 +3,7 @@ const tl = gsap.timeline()
 
 
     //tl.set("main", { autoAlpha: 0 });
-    tl.set(".bg", { opacity: 0 });
     //tl.set("body", { opacity: 0, backgroundColor: "#FFFFFF" });
-    tl.set("hr", { width: 0 });
     tl.set(".Logo path", { opacity: 0, color: "black" });
     
     

@@ -130,29 +130,8 @@ export default {
         id: 'Index'
       },
       script: [
-        { src: "/js/animation.js", body: true },
+        { src: "js/animation.js", body: true },
       ]
-    },
-
-    methods: {
-      Animation() {
-        gsap.set(".reveal", { autoAlpha: 0 });
-        gsap.from(".reveal", 1, {
-          xPercent: 0,
-          opacity: 0,
-          scrollTrigger: {
-            trigger: ".reveal",
-          },
-        });
-        gsap.from(".reveal img", 1, {
-          xPercent: 0,
-          scale: 1.25,
-          delay: -3.5,
-          scrollTrigger: {
-            trigger: ".reveal",
-          },
-        });
-      },
     },
     
     mounted () {
@@ -190,6 +169,7 @@ export default {
       })
       */
       
+      /*
       gsap.registerPlugin(ScrollTrigger);
       this.Animation();
 
@@ -205,6 +185,7 @@ export default {
       window.addEventListener("beforeunload", () => {
         sessionStorage.setItem("scrollY", window.scrollY);
       });
+      */
       
     },
     

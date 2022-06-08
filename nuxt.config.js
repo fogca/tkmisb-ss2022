@@ -37,11 +37,7 @@ export default {
       { rel: 'contact', href: 'https://takumiisobe.com/#index-contact/' },
       { rel: 'icon', type: 'image/x-icon', href: '/fav.ico' }
     ],
-    script: [
-      { src: "/js/header.js", body: true },
-      //{ src: "//typesquare.com/3/tsst/script/ja/typesquare.js?616abf4f07244993b0057f1eac1e02e5", ssr: false },
-  
-      { src: "https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js", ssr: false },
+    script: [      
       { src: "//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/gsap.min.js", ssr: false },
       { src: "//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/ScrollTrigger.min.js", ssr: false },
       { src: "https://webfont.fontplus.jp/accessor/script/fontplus.js?kqbwQX--jVA%3D&box=2bQkUFfZnEc%3D&aa=1&ab=2", ssr: false }
