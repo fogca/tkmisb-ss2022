@@ -16,14 +16,14 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'ディレクター・デザイナー・デベロッパーである磯部拓のクリエイティブスペース - takumiisobeです。主な業務内容としてはUIデザイン・グラフィックデザイン・モーショングラフィックス・WEBサイト構築・撮影、と視覚領域のブランド構築などを行なっています。' || '' },
-      { hid: 'keywords', name: 'keywords', content: 'Takumi, Takumi Isobe, Creative Space, Design Studio, Tokyo, Japan, デザイン, クリエイティブスペース, 磯部 拓, UI/UX Design' },
+      { hid: 'description', name: 'description', content: 'アートディレクター 磯部たくみのクリエイティブスペースです。挑戦し続けるブランドの伴走するパートナーとして、視覚領域からクリエイティブ領域までの支援を行って参ります。主な業務内容としてはUIデザイン・グラフィックデザイン・モーショングラフィックス・WEBサイト構築・撮影、と視覚領域のブランド構築などを行なっています。' || '' },
+      { hid: 'keywords', name: 'keywords', content: 'Takumi, Takumi Isobe, Creative Space, Design Studio, Tokyo, Japan, デザイン, クリエイティブスペース, 磯部 拓, 磯部たくみ, UI/UX Design' },
 
       { hid: 'og:site_name', property: 'og:site_name', content: 'Takumi Isobe- Creative Director' },
       { hid: 'og:type', property: 'og:type', content: 'Portfolio' },
       { hid: 'og:url', property: 'og:url', content: 'takumiisobe.com' },
       { hid: 'og:title', property: 'og:title', content: 'Takumi Isobe - Creative Director' },
-      { hid: 'og:description', property: 'og:description', content: 'ディレクター・デザイナー・デベロッパーである磯部拓のクリエイティブスペース - takumiisobeです。主な業務内容としてはUIデザイン・グラフィックデザイン・モーショングラフィックス・WEBサイト構築・撮影、と視覚領域のブランド構築などを行なっています。' },
+      { hid: 'og:description', property: 'og:description', content: 'アートディレクター 磯部たくみのクリエイティブスペースです。挑戦し続けるブランドの伴走するパートナーとして、視覚領域からクリエイティブ領域までの支援を行って参ります。主な業務内容としてはUIデザイン・グラフィックデザイン・モーショングラフィックス・WEBサイト構築・撮影、と視覚領域のブランド構築などを行なっています。' },
       { hid: 'og:image', property: 'og:image', content: 'takumiisobe.com' },
 
       { hid: 'fb:app_id', property: 'fb:app_id', content: 'App-ID' },
@@ -32,8 +32,9 @@ export default {
     ],
     link: [
       { rel: 'index', href: 'https://takumiisobe.com/' },
-      { rel: 'about', href: 'https://takumiisobe.com/about/' },
-      { rel: 'contact', href: 'https://takumiisobe.com/contact/' },
+      { rel: 'projects', href: 'https://takumiisobe.com/#index-projects/' },
+      { rel: 'about', href: 'https://takumiisobe.com/#index-about/' },
+      { rel: 'contact', href: 'https://takumiisobe.com/#index-contact/' },
       { rel: 'icon', type: 'image/x-icon', href: '/fav.ico' }
     ],
     script: [

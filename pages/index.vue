@@ -5,10 +5,10 @@
       <div class="wrapper">
         <h1 class="h2" lang="en" id="top-Line">
           <span class="pc">
-          <span class="sp">As a companion partner of the </span>
-          <span class="sp">brand that continues to challenge, </span></span><br>
+          <span class="sp">As a partner of the </span>
+          <span class="sp">brand that is always challenging, </span></span><br>
           <span class="pc">
-          <span class="sp">we will support from the visual </span>
+          <span class="sp">I will support from the visual </span>
           <span class="sp">area to the creative area.</span></span>
         </h1>
         <h2 class="h6">挑戦し続けるブランドのパートナーとして、<br class="sp">視覚領域から<br class="pc">クリエイティブ領域までを伴走し、<br class="sp">顧客の元に届くまで、様々な形で支援を行います。</h2>

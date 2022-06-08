@@ -133,7 +133,7 @@ header {
   top: 0;
   transition: 1s transform ease-in-out;
   z-index: 99;
-  padding: 2rem 8.25vw .5rem;
+  padding: 2rem 6.5vw .5rem;
   background: var(--backgroundColor);
 }
 header .sp-top {      

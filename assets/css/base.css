@@ -45,7 +45,7 @@ html, body {
     transition: 1.5s background ease-in-out;
 }
 
-body.is-color {
+body.is-color, body.is-color header {
   background-color: #121212;
   color: #f0f0f0;
   transition: 1.8s background ease-in-out;
