@@ -42,24 +42,24 @@
       <div class="wrapper">
         <div class="container">
           <div class="box">
-            <div class="h3 year" lang="en">2020</div>
-            <div class="h4"><span class="h3" lang="en">University of Westminster</span> 入学</div>
+            <div class="h4 year" lang="en">2020</div>
+            <div class="h5"><span class="h4" lang="en">University of Westminster</span> 入学</div>
           </div>
           <div class="box">
-            <div class="h3 year" lang="en">2021</div>
-            <div class="h4">大学休学 - クリエイティブスタジオにて<br>視覚領域における実務経験を積む</div>
+            <div class="h4 year" lang="en">2021</div>
+            <div class="h5">大学休学 - クリエイティブスタジオにて<br>視覚領域における実務経験を積む</div>
           </div>
           <div class="box">
-            <div class="h3 year" lang="en">2022</div>
-            <div class="h4">
-              クリエイティブスタジオ<span class="h3" lang="en"> one inc.</span> デザイナー<br>
-              <span class="h3" lang="en">Shochu X</span> アートディレクター
+            <div class="h4 year" lang="en">2022</div>
+            <div class="h5">
+              クリエイティブスタジオ<span class="h4" lang="en"> one inc.</span> デザイナー<br>
+              <span class="h4" lang="en">Shochu X</span> アートディレクター
             </div>
           </div>
         </div>
         <div class="p">
           英国・ロンドンのUniversity of Westminsterにて経営学を専攻・在学中。オーストラリアやイギリスでの生活で、日本との視覚表現の違いや感じ方の相違に興味を抱き、デザインや写真、動画を始める。帰国の度に日本文化や和が持つ独自の余白の心地良さを体感し、伝統・文化への知見を深める。<br>
-          <span class="p pc">
+          <span class="pc">
             また大学を休学し、東京のクリエイティブスタジオにて実務経験を積む。現在はグラフィックデザイン・UIデザイン・ビジュアルの撮影に加え、Webサイト・アプリの構築・テクニカルディレクションを行う。Web領域においては、モダンウェブアーキテクチャとも呼ばれる、JAMStackでの構築を多く手掛け、従来の一般的なCMSから一線を画す、ユーザー・クライアント・デベロッパーフレンドリーなワークフローに注力している。(主に使用するフレームワークはVue.js / Nuxt.js)
           </span>
           <div class="accordion">
@@ -283,11 +283,12 @@ export default {
   left: 0;
   margin: 0 auto; 
   overflow: hidden; 
-  background: linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 50%); 
+  background: linear-gradient(to right, var(--textColor) 50%, rgba(255, 255, 255, 0) 50%); 
   background-position: -15.5rem 0; 
   background-size: 200% 100%; 
   animation: animation 5s cubic-bezier(0.8, 0, 0.35, 1) forwards infinite;
 }
+#index-contact a:nth-of-type(2)::after  {animation: animation 5s 1s cubic-bezier(0.8, 0, 0.35, 1) forwards infinite;}
 
 @keyframes animation {
   0% { background-position: 100% 0; }
@@ -322,7 +323,7 @@ export default {
   .bg {background-image: url("assets/image/bg@.jpg");}
 
   #Index section#index-projects, #Index section#index-laboratory, 
-  #Index section#index-about{
+  #Index section#index-about, #Index section#index-contact {
     padding-top: 12.5rem;}
 
   #Index section#index-top {    
@@ -361,8 +362,8 @@ export default {
 
   #index-about .accordion {display: none;}
   #index-about .wrapper {width: 70%;}
-  #index-about p {font-size: 2.2rem;}
-  #index-about p span {font-size: 1.6rem;}
+  #index-about .p {font-size: 2.2rem;margin-top: 2rem;}
+  #index-about .p span {font-size: 1.6rem;margin-top: 1rem;}
 
 
 #index-laboratory .wrapper .container {
