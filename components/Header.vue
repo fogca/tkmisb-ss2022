@@ -69,6 +69,15 @@ export default {
       const currentPos = window.pageYOffset && document.documentElement.scrollTop 
       this.headerTopFlag = topLocation==currentPos
     })
+
+    const colorBody = document.querySelector("body")
+    const root = document.documentElement
+    let btn = document.querySelector('#circle-color')
+    btn.addEventListener('click', function() {
+      colorBody.classList.toggle('is-color')
+      //root.style.setProperty("--textColor","#FFFFFF")
+      //root.style.setProperty("--backgroundColor","#181818")
+    }, false)
   },
   /*
   methods: {

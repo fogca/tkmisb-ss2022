@@ -31,6 +31,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+    transition: 2s color ease-in-out;
 }
 
 html {
@@ -41,12 +42,30 @@ html, body {
     width: 100vw;
     overflow-x: hidden;
     background-color: var(--backgroundColor);
+    transition: 1.5s background ease-in-out;
 }
 
-.dark-mode body {
-  background-color: #091a28;
-  color: #ebf4f1;
+body.is-color {
+  background-color: #121212;
+  color: #f0f0f0;
+  transition: 1.8s background ease-in-out;
 }
+body.is-color * {
+    color: #f0f0f0;
+    transition: 2s color ease-in-out;
+}
+body .Logo path {transition: 2s fill ease-in-out;}
+body.is-color .Logo path {fill: #f0f0f0;transition: 2s fill ease-in-out;}
+body.is-color header .circles .circle:nth-of-type(2n+1) {
+    border: 1px solid var(--backgroundColor);
+    background: var(--textColor);
+    transition: 1.8s background border ease-in-out;
+  }
+body.is-color header .circles .circle:nth-of-type(2n) {
+    border: 1px solid var(--backgroundColor);
+    background: var(--backgroundColor);
+    transition: 1.8s background border ease-in-out;
+  }
 
 @media screen and (max-width: 480px) {
 }
