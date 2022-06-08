@@ -58,9 +58,9 @@
           </div>
         </div>
         <div class="p">
-          英国・ロンドンのUniversity of Westminsterにて経営学を専攻・在学中。オーストラリアやイギリスでの生活で、日本との視覚表現の違いや感じ方の相違に興味を抱き、デザインや写真、動画を始める。帰国の度に日本文化や和が持つ独自の余白の心地良さを体感し、伝統・文化への知見を深める。<br>
+          英国・ロンドンのUniversity of Westminsterにて経営学を専攻・在学中。オーストラリアやイギリスでの生活で、日本との視覚表現の違いや感じ方の相違に興味を抱き、デザインや写真、動画を始める。<br>
           <span class="pc">
-            また大学を休学し、東京のクリエイティブスタジオにて実務経験を積む。現在はグラフィックデザイン・UIデザイン・ビジュアルの撮影に加え、Webサイト・アプリの構築・テクニカルディレクションを行う。Web領域においては、モダンウェブアーキテクチャとも呼ばれる、JAMStackでの構築を多く手掛け、従来の一般的なCMSから一線を画す、ユーザー・クライアント・デベロッパーフレンドリーなワークフローに注力している。(主に使用するフレームワークはVue.js / Nuxt.js)
+            帰国の度に日本文化や和が持つ独自の余白の心地良さを体感し、伝統・文化への知見を深める。また大学を休学し、東京のクリエイティブスタジオにて実務経験を積む。現在はグラフィックデザイン・UIデザイン・ビジュアルの撮影に加え、Webサイト・アプリの構築・テクニカルディレクションを行う。Web領域においては、モダンウェブアーキテクチャとも呼ばれる、JAMStackでの構築を多く手掛け、従来の一般的なCMSから一線を画す、ユーザー・クライアント・デベロッパーフレンドリーなワークフローに注力している。(主に使用するフレームワークはVue.js / Nuxt.js)
           </span>
           <div class="accordion">
             <input id="acd-check1" class="acd-check" type="checkbox">
@@ -86,9 +86,12 @@
             まだ見ぬ飲食の体験を創り出します。
         </h4>
         <div class="container">
-          <img src="@/assets/image/pc_farmentation.jpg" alt="">
-          <img src="@/assets/image/pc_aging.jpg" alt="">
-          <img src="@/assets/image/pc_distillation.jpg" alt="">
+          <img src="@/assets/image/sp_farmentation.jpg" alt="" class="sp">
+          <img src="@/assets/image/sp_aging.jpg" alt="" class="sp">
+          <img src="@/assets/image/sp_distillation.jpg" alt="" class="sp">
+          <img src="@/assets/image/pc_farmentation.jpg" alt="" class="pc">
+          <img src="@/assets/image/pc_aging.jpg" alt="" class="pc">
+          <img src="@/assets/image/pc_distillation.jpg" alt="" class="pc">
         </div>
       </div>
     </section>
@@ -221,6 +224,10 @@ export default {
 #Index main {position: relative;z-index: 2;padding-bottom: 10rem;}
 #Index section {padding: 0 6.5%;}
 
+  #Index section#index-projects, #Index section#index-laboratory, 
+  #Index section#index-about, #Index section#index-contact {
+    padding-top: 9.5rem;}
+
 #index-top {
   margin-top: 10rem;
 }
@@ -271,7 +278,24 @@ export default {
 #index-about .wrapper .container .box div:nth-of-type(1) {margin-right: 2.5rem;}
 #index-about .wrapper p {margin-top: 4rem;}
 
-#index-contact a.mail {position:relative;margin-top: 4rem;}
+@keyframes animation {
+  0% { background-position: 100% 0; }
+  10% { background-position: 100% 0; }
+  45% { background-position: 0 0; }
+  80% { background-position: -100% 0; }
+  90% { background-position: -100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+
+
+#Index section#index-laboratory {padding-top: 10rem;}
+#index-laboratory .kanro {margin: 5rem 0 1rem;}
+#index-laboratory .kanro svg {width: 16.5rem;}
+#index-laboratory .container {margin-top: 6.5rem;}
+#index-laboratory .container img.sp {margin-bottom: 2rem;}
+
+#index-contact a.mail {position:relative;}
 
 #index-contact a.mail::after {
   content: "";
@@ -290,18 +314,9 @@ export default {
 }
 #index-contact a:nth-of-type(2)::after  {animation: animation 5s 1s cubic-bezier(0.8, 0, 0.35, 1) forwards infinite;}
 
-@keyframes animation {
-  0% { background-position: 100% 0; }
-  10% { background-position: 100% 0; }
-  45% { background-position: 0 0; }
-  80% { background-position: -100% 0; }
-  90% { background-position: -100% 0; }
-  100% { background-position: -100% 0; }
-}
-
-
-
-#Index section#index-laboratory {padding-top: 10rem;}
+#index-contact .wrapper {margin-top: 5rem;}
+#index-contact .wrapper .container {margin-bottom: 3rem;}
+#index-contact .wrapper .container a.mail {margin-top: .5rem;}
 
 
 
@@ -362,8 +377,8 @@ export default {
 
   #index-about .accordion {display: none;}
   #index-about .wrapper {width: 70%;}
-  #index-about .p {font-size: 2.2rem;margin-top: 2rem;}
-  #index-about .p span {font-size: 1.6rem;margin-top: 1rem;}
+  #index-about .p {font-size: 2.2rem;margin-top: 5rem;}
+  #index-about .p span {font-size: 1.6rem;margin-top: 2.5rem;}
 
 
 #index-laboratory .wrapper .container {
