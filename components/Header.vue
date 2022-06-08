@@ -14,7 +14,7 @@
       <div class="circle"></div><div class="circle"></div>
       <div class="circle"></div><div class="circle"></div>
     </div>
-    <a href="/" aria-label="Home"><Logo /></a>
+    <a href="/" aria-label="Home" class="logo-link"><Logo /></a>
   </div>
     
     <ul>
@@ -231,7 +231,8 @@ header a {transition: 0s;}
     background: transparent;
     padding-top: 5rem;
   }
-  header.scrolled {transform: translateY(-15px);}
+  header.scrolled {transform: translateY(0px);}
+  header.scroll-up {transform: translateY(0);}
 
   header ul {
     display: flex;
@@ -259,6 +260,11 @@ header a {transition: 0s;}
     width: 2.5rem;
     height: 2.5rem;
   }
+
+  header .logo-link {
+    position: absolute;
+    bottom: 5rem;
+    left: auto;}
 
 }
 

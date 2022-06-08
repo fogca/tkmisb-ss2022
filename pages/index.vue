@@ -57,15 +57,20 @@
             </div>
           </div>
         </div>
-        <p class="">
-          ロンドンUniversity of Westminsterにて経営学を専攻・在学中。オーストラリアやイギリスで生活していく中で、日本との視覚表現の違いや感じ方の相違に興味を抱き、グラフィックデザイン・UIデザイン・写真・動画を始める。休暇の度に帰国しては、日本文化や思考の心地良さを体感し、伝統工芸や日本文化に興味を持ち始める。<br><br>
-          また大学を休学し、東京のクリエイティブスタジオにて実務経験を積む。現在はグラフィックデザイン・UIデザイン・ビジュアルの撮影に加え、Webサイト・アプリの構築・テクニカルディレクションを行う。Web領域においては、モダンウェブアーキテクチャとも呼ばれる、JAMStackでの構築を多く手掛け、従来の一般的なCMSから一線を画す、ユーザー・クライアント・デベロッパーフレンドリーなワークフローに注力している。(主に使用するフレームワークはVue.js / Nuxt.js)
-        </p>
-        <a href="
-        mailto:hi@takumiisobe.com?subject=お問い合わせ&body=この度はお問い合わせをいただきまして、%0D%0A誠にありがとうございます。%0D%0A%0D%0A%0D%0A【お名前】%0D%0A%0D%0A%0D%0A【メールアドレス】%0D%0A%0D%0A%0D%0A【お問い合わせの内容】%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A上記をご記入の上、本メールを送信していただけますと幸いに存じます。%0D%0A順次ご対応させていただきます。%0D%0A%0D%0Aどうぞ、よろしくお願いいたします。%0D%0A%0D%0A%0D%0A磯部たくみ
-        " class="mail h4">メールのお問い合わせ</a>
+        <div class="p">
+          英国・ロンドンのUniversity of Westminsterにて経営学を専攻・在学中。オーストラリアやイギリスでの生活で、日本との視覚表現の違いや感じ方の相違に興味を抱き、デザインや写真、動画を始める。帰国の度に日本文化や和が持つ独自の余白の心地良さを体感し、伝統・文化への知見を深める。<br>
+          <span class="p pc">
+            また大学を休学し、東京のクリエイティブスタジオにて実務経験を積む。現在はグラフィックデザイン・UIデザイン・ビジュアルの撮影に加え、Webサイト・アプリの構築・テクニカルディレクションを行う。Web領域においては、モダンウェブアーキテクチャとも呼ばれる、JAMStackでの構築を多く手掛け、従来の一般的なCMSから一線を画す、ユーザー・クライアント・デベロッパーフレンドリーなワークフローに注力している。(主に使用するフレームワークはVue.js / Nuxt.js)
+          </span>
+          <div class="accordion">
+            <input id="acd-check1" class="acd-check" type="checkbox">
+            <label class="acd-label" for="acd-check1"></label>
+            <div class="acd-content">
+              また大学を休学し、東京のクリエイティブスタジオにて実務経験を積む。現在はグラフィックデザイン・UIデザイン・ビジュアルの撮影に加え、Webサイト・アプリの構築・テクニカルディレクションを行う。Web領域においては、モダンウェブアーキテクチャとも呼ばれる、JAMStackでの構築を多く手掛け、従来の一般的なCMSから一線を画す、ユーザー・クライアント・デベロッパーフレンドリーなワークフローに注力している。(主に使用するフレームワークはVue.js / Nuxt.js)
+            </div>
+          </div>
+        </div>
       </div>
-
     </section>
 
 
@@ -76,13 +81,38 @@
       </div>
       <div class="wrapper">
         <h3 class="kanro"><Kanro /></h3>
+        <h4>発酵・熟成・蒸留を通し、体の健やかさを<br class="sp">
+            求めて、様々な観点から<br class="pc">香草や食材を配合し、<br class="sp">
+            まだ見ぬ飲食の体験を創り出します。
+        </h4>
+        <div class="container">
+          <img src="@/assets/image/pc_farmentation.jpg" alt="">
+          <img src="@/assets/image/pc_aging.jpg" alt="">
+          <img src="@/assets/image/pc_distillation.jpg" alt="">
+        </div>
       </div>
     </section>
 
+    <section id="index-contact">
+      <div class="section-header">
+        <h1 lang="en" class="heading">Contact</h1>
+        <h2 class="h5">お気軽にお問い合わせください</h2>
+      </div>
+      <div class="wrapper">
+        <div class="container">
+          <h3 class="h5">メールでのお問い合わせはこちら</h3>
+          <a href="
+          mailto:hi@takumiisobe.com?subject=お問い合わせ&body=この度はお問い合わせをいただきまして、%0D%0A誠にありがとうございます。%0D%0A%0D%0A%0D%0A【お名前】%0D%0A%0D%0A%0D%0A【メールアドレス】%0D%0A%0D%0A%0D%0A【お問い合わせの内容】%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A上記をご記入の上、本メールを送信していただけますと幸いに存じます。%0D%0A順次ご対応させていただきます。%0D%0A%0D%0Aどうぞ、よろしくお願いいたします。%0D%0A%0D%0A%0D%0A磯部たくみ
+          " class="mail h3" lang="en">hi@takumiisobe.com</a>
+        </div>
 
-    <section id="index-inhouse"></section>
-    <section id="index-contact"></section>
-    <section id="index-instagram"></section>
+        <div class="container">
+          <h3 class="h5">メールでのお問い合わせはこちら</h3>
+          <a href="https://www.messenger.com/t/100069870710731" target="blank_" class="mail h3" lang="en">Facebook Messanger</a>
+        </div>
+      </div>
+
+    </section>
   
   </main>
 
@@ -241,9 +271,9 @@ export default {
 #index-about .wrapper .container .box div:nth-of-type(1) {margin-right: 2.5rem;}
 #index-about .wrapper p {margin-top: 4rem;}
 
-#index-about .wrapper a.mail {position:relative;margin-top: 4rem;}
+#index-contact a.mail {position:relative;margin-top: 4rem;}
 
-#index-about .wrapper a.mail::after {
+#index-contact a.mail::after {
   content: "";
   width: 18rem; 
   width: 100%;
@@ -289,9 +319,11 @@ export default {
   .circles {top: 50%;}
   .circles div {width: 30vw;height: 30vw;}
   
-  .bg {
-    background-image: url("assets/image/bg@.jpg");
-  }
+  .bg {background-image: url("assets/image/bg@.jpg");}
+
+  #Index section#index-projects, #Index section#index-laboratory, 
+  #Index section#index-about{
+    padding-top: 12.5rem;}
 
   #Index section#index-top {    
     margin-top: 11.25vh;
@@ -304,10 +336,6 @@ export default {
     margin-top: 1rem;}
 
 
-
-
-  #Index section#index-projects {padding-top: 12.5rem;}
-
   #index-projects .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -316,9 +344,6 @@ export default {
   }
   #index-projects .wrapper a {width: 47.5%;position: initial;}
   #index-projects .container .img-box {width: 100%;min-height: initial;}
-
-
-
 
 
   #index-projects .wrapper img {
@@ -332,13 +357,30 @@ export default {
     flex-direction: column;
     justify-content: flex-end;
     transition: .5s .15s ease-in-out;}
-#index-projects .box .h2 {font-size: 2.4rem;}
 
-#index-projects .container:hover {opacity: 1;}
 
+  #index-about .accordion {display: none;}
+  #index-about .wrapper {width: 70%;}
+  #index-about p {font-size: 2.2rem;}
+  #index-about p span {font-size: 1.6rem;}
+
+
+#index-laboratory .wrapper .container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: 1rem;
+  margin-top: 4rem;
 }
 
 
+#index-laboratory .wrapper .kanro {
+  margin: 5rem 0 2.5rem;
+  width: 18rem;}
+
+
+
+}
 
 
 

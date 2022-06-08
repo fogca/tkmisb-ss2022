@@ -143,6 +143,35 @@ body .is-menuOpen {
 
 
 
+.accordion {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-reverse;
+}
+.acd-check{display: none;}
+.acd-label{display: block;}
+.acd-label::before {
+  display: block;
+  content: "続きを読む";
+}
+.acd-content{
+  opacity: 0;
+  visibility: hidden;
+  padding-top: 10px;
+  height: 0;
+  
+}
+.acd-check:checked + .acd-label + .acd-content{
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+.acd-check:checked + .acd-label::before {content: "折り畳む";}
+
+
+
+
 
 
 
