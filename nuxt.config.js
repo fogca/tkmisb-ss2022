@@ -40,7 +40,8 @@ export default {
     script: [      
       { src: "//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/gsap.min.js", ssr: false },
       { src: "//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/ScrollTrigger.min.js", ssr: false },
-      { src: "https://webfont.fontplus.jp/accessor/script/fontplus.js?kqbwQX--jVA%3D&box=2bQkUFfZnEc%3D&aa=1&ab=2", ssr: false }
+      { src: "https://webfont.fontplus.jp/accessor/script/fontplus.js?kqbwQX--jVA%3D&box=2bQkUFfZnEc%3D&aa=1&ab=2", ssr: false },
+      { src: "js/animation.js", body: true },
               
     ]
   },

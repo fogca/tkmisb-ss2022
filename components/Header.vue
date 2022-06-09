@@ -4,8 +4,8 @@
   :class="{
     'is-active': isActiveMenu, 
     'scrolled': headerHiddenFlag,
-    'is-top': headerTopFlag,
-    'scroll-up': headerScrollUp}" 
+    'is-top': headerTopFlag
+    }" 
   >
 
   <div class="sp-top">
@@ -60,8 +60,8 @@ export default {
     window.addEventListener('scroll', () => {
       const currentPos = window.pageYOffset && document.documentElement.scrollTop 
       this.headerHiddenFlag = currentPos > startPos && currentPos > 15
-      this.headerScrollUp = currentPos < startPos && currentPos
       startPos = currentPos
+      //this.headerScrollUp = currentPos < startPos && currentPos
     })
     //Remove class;is-top from header when it is scolled from top
     let topLocation = 0

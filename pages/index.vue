@@ -129,9 +129,6 @@ export default {
       bodyAttrs: {
         id: 'Index'
       },
-      script: [
-        { src: "js/animation.js", body: true },
-      ]
     },
     
     mounted () {
@@ -142,7 +139,7 @@ export default {
       } catch(e){
         console.log("[error]load FONTPLUS.")
       }
-
+/*
       document.getElementById('circle-color').addEventListener('click', () => {
         const currentPos = window.pageYOffset && document.documentElement.scrollTop 
         if (currentPos > 300) {
@@ -154,6 +151,7 @@ export default {
         }
         //startPos = currentPos
       })
+      */
 
       /*
       window.addEventListener('scroll', () => {
