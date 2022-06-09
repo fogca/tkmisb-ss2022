@@ -3,7 +3,8 @@ export default {
   pageTransition: 'fade',
 
   // Target: https://go.nuxtjs.dev/config-target
-  //mode: 'universal',
+  // This way of writing would be the latest 2022 June
+  ssr: 'true',
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -41,7 +42,7 @@ export default {
       { src: "//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/gsap.min.js", ssr: false },
       { src: "//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/ScrollTrigger.min.js", ssr: false },
       { src: "https://webfont.fontplus.jp/accessor/script/fontplus.js?kqbwQX--jVA%3D&box=2bQkUFfZnEc%3D&aa=1&ab=2", ssr: false },
-      { src: "js/animation.js", body: true },
+      { src: "js/animation.js", ssr: false, body: true },
               
     ]
   },
@@ -131,13 +132,13 @@ export default {
    ** https://github.com/nuxt-community/pwa-module
    */
    manifest: {
-    name: 'Takumi Isobe - Creative Space',
+    name: '磯部たくみのクリエイティブスペース',
     lang: 'ja',
     short_name: 'Takumi Isobe',
-    title: 'Takumi Isobe - Creative Space',
-    'og:title': 'Takumi Isobe - Creative Space',
-    description: 'ディレクター・デザイナー・デベロッパーである磯部拓のクリエイティブスペース - takumiisobeです。主な業務内容としてはUIデザイン・グラフィックデザイン・モーショングラフィックス・WEBサイト構築・撮影、と視覚領域のブランド構築などを行なっています。',
-    'og:description': 'ディレクター・デザイナー・デベロッパーである磯部拓のクリエイティブスペース - takumiisobeです。主な業務内容としてはUIデザイン・グラフィックデザイン・モーショングラフィックス・WEBサイト構築・撮影、と視覚領域のブランド構築などを行なっています。',
+    title: '磯部たくみのクリエイティブスペース',
+    'og:title': '磯部たくみのクリエイティブスペース',
+    description: 'アートディレクター 磯部たくみのクリエイティブスペースです。挑戦し続けるブランドの伴走するパートナーとして、視覚領域からクリエイティブ領域までの支援を行って参ります。主な業務内容としてはUIデザイン・グラフィックデザイン・モーショングラフィックス・WEBサイト構築・撮影、と視覚領域のブランド構築などを行なっています。',
+    'og:description': 'アートディレクター 磯部たくみのクリエイティブスペースです。挑戦し続けるブランドの伴走するパートナーとして、視覚領域からクリエイティブ領域までの支援を行って参ります。主な業務内容としてはUIデザイン・グラフィックデザイン・モーショングラフィックス・WEBサイト構築・撮影、と視覚領域のブランド構築などを行なっています。',
     theme_color: '#3E1515',
     background_color: '#E2E2E2'
   },
