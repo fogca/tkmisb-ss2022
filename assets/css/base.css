@@ -1,15 +1,15 @@
 @charset "UTF-8";
 
-
 @font-face {
     font-family: 'Aa';
-    src: url('assets/font/Astro-50.woff2') format('woff2');
+    src: url('assets/font/Astro-45.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'AA';
-    src: url('assets/font/Astro-55.woff2') format('woff2');
+    src: url('assets/font/Astro-50.woff2') format('woff2');
 }
+
 
 
 
@@ -73,7 +73,7 @@ body.is-color header .circles .circle:nth-of-type(2n) {
 
 div, h1, h2, h3, h4, h5, h6, p, a, span, button {
     font-family: "Aa", TsukuOldGothicStd-B, sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     color: var(--textColor);
     font-display: swap;
     font-feature-settings: "palt";
