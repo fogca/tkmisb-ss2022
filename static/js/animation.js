@@ -1,12 +1,7 @@
 const tl = gsap.timeline()
-
-
-
-    //tl.set("main", { autoAlpha: 0 });
-    //tl.set("body", { opacity: 0, backgroundColor: "#FFFFFF" });
+    tl.set("body", { opacity: 0});
     tl.set(".Logo path", { opacity: 0, color: "black" });
-    
-    
+
     tl.from("body", {
       opacity: 0,
       duration: .5,
@@ -27,7 +22,6 @@ const tl = gsap.timeline()
       duration: 2.5}, "op+=1");
 
     tl.from("#top-Line span", {
-      //width: "105%",
       opacity: 0,
       y: 5,
       stagger: .05,
@@ -42,8 +36,6 @@ const tl = gsap.timeline()
       ease: "power2.inOut",
       duration: 2.5,}, "op+=.65");
 
-
-
     tl.from("#index-projects .container .img-box img", {
       scale: 1.25,
       ease: "Power1.Out",
@@ -56,22 +48,20 @@ const tl = gsap.timeline()
       ease: "Power1.easeOut",
       duration: 2.5,}, "op+=1.5");
 
-if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches) {
+  if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches) {
 
-  tl.from("#index-projects .img-box", {
-    autoAlpha: 0,
-    width: 50,
-    ease: "power2.in",
-    duration: 2,}, "op+=1");
+    tl.from("#index-projects .img-box", {
+      autoAlpha: 0,
+      width: 50,
+      ease: "power2.in",
+      duration: 2,}, "op+=1");
     
   } else {
-
 
     tl.from("#index-projects .img-box", {
       autoAlpha: 0,
       ease: "power2.in",
       duration: 2,}, "op+=1");
-
 
     tl.from("header ul li", {
       autoAlpha: 0,
@@ -80,7 +70,6 @@ if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches)
       stagger: .2,
       ease: "power2.inOut",
       duration: 2,}, "op+=1");
-
   }
 
 
@@ -157,3 +146,56 @@ gsap.registerPlugin(ScrollTrigger);
     });
 
 */
+
+
+
+
+/*
+
+
+/*
+      document.getElementById('circle-color').addEventListener('click', () => {
+        const currentPos = window.pageYOffset && document.documentElement.scrollTop 
+        if (currentPos > 300) {
+          document.documentElement.style.setProperty('--backgroundColor', '#090909');
+          document.documentElement.style.setProperty('--textColor', '#e3e3e3');
+        } else {
+          document.documentElement.style.setProperty('--backgroundColor', '#e3e3e3');
+          document.documentElement.style.setProperty('--textColor', '#090909');
+        }
+        //startPos = currentPos
+      })
+      */
+
+      /*
+      window.addEventListener('scroll', () => {
+        const currentPos = window.pageYOffset && document.documentElement.scrollTop 
+        if (currentPos > 300) {
+          document.documentElement.style.setProperty('--backgroundColor', '#090909');
+          document.documentElement.style.setProperty('--textColor', '#e3e3e3');
+        } else {
+          document.documentElement.style.setProperty('--backgroundColor', '#e3e3e3');
+          document.documentElement.style.setProperty('--textColor', '#090909');
+        }
+        //startPos = currentPos
+      })
+      */
+      
+      /*
+      gsap.registerPlugin(ScrollTrigger);
+      this.Animation();
+
+      //Store the certain local position and bring it back here when the page back
+      (() => {
+      let entries = performance.getEntriesByType("navigation");
+      entries.forEach((entry) => {
+        if (entry.type == "back_forward" && sessionStorage.getItem("scrollY") != null) {
+          window.scrollTo(0, sessionStorage.getItem("scrollY"));
+        }
+      });
+      })();
+      window.addEventListener("beforeunload", () => {
+        sessionStorage.setItem("scrollY", window.scrollY);
+      });
+      */
+      

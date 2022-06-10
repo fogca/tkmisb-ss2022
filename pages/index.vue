@@ -132,6 +132,8 @@ export default {
     },
     
     mounted () {
+      this.gsapOpAnimation()
+
       this.$adobeFonts(document)
 
       try{
@@ -139,52 +141,86 @@ export default {
       } catch(e){
         console.log("[error]load FONTPLUS.")
       }
-/*
-      document.getElementById('circle-color').addEventListener('click', () => {
-        const currentPos = window.pageYOffset && document.documentElement.scrollTop 
-        if (currentPos > 300) {
-          document.documentElement.style.setProperty('--backgroundColor', '#090909');
-          document.documentElement.style.setProperty('--textColor', '#e3e3e3');
-        } else {
-          document.documentElement.style.setProperty('--backgroundColor', '#e3e3e3');
-          document.documentElement.style.setProperty('--textColor', '#090909');
-        }
-        //startPos = currentPos
-      })
-      */
+    },
 
-      /*
-      window.addEventListener('scroll', () => {
-        const currentPos = window.pageYOffset && document.documentElement.scrollTop 
-        if (currentPos > 300) {
-          document.documentElement.style.setProperty('--backgroundColor', '#090909');
-          document.documentElement.style.setProperty('--textColor', '#e3e3e3');
-        } else {
-          document.documentElement.style.setProperty('--backgroundColor', '#e3e3e3');
-          document.documentElement.style.setProperty('--textColor', '#090909');
-        }
-        //startPos = currentPos
-      })
-      */
-      
-      /*
-      gsap.registerPlugin(ScrollTrigger);
-      this.Animation();
+    methods: {
+      gsapOpAnimation() {
+      const tl = this.$gsap
+    
+    //tl.set("body", { opacity: 0})
+    //tl.set(".Logo path", { opacity: 0, color: "black" })
 
-      //Store the certain local position and bring it back here when the page back
-      (() => {
-      let entries = performance.getEntriesByType("navigation");
-      entries.forEach((entry) => {
-        if (entry.type == "back_forward" && sessionStorage.getItem("scrollY") != null) {
-          window.scrollTo(0, sessionStorage.getItem("scrollY"));
-        }
-      });
-      })();
-      window.addEventListener("beforeunload", () => {
-        sessionStorage.setItem("scrollY", window.scrollY);
-      });
-      */
-      
+    tl.from("body", {
+      opacity: 0,
+      duration: .5,
+    }, "op")
+
+    tl.from(".Logo path", {
+      opacity: 0,
+      y: 5,
+      stagger: .05,
+      ease: "power4.inOut",
+      duration: 2}, "op+=1");
+
+    tl.from(".circle", {
+      opacity: 0,
+      x: 5,
+      stagger: .1,
+      ease: "power4.inOut",
+      duration: 2.5}, "op+=1");
+
+    tl.from("#top-Line span", {
+      opacity: 0,
+      y: 5,
+      stagger: .05,
+      filter: "blur(3px)",
+      ease: "power2.inOut",
+      duration: 2.5,}, "op");
+
+    tl.from("#index-top h2", {
+      opacity: 0,
+      y: 7,
+      filter: "blur(5px)",
+      ease: "power2.inOut",
+      duration: 2.5,}, "op+=.65");
+
+    tl.from("#index-projects .container .img-box img", {
+      scale: 1.25,
+      ease: "Power1.Out",
+      duration: 2.5,}, "op+=1");
+
+    tl.from("#index-projects .container .box *", {
+      opacity: 0,
+      x: 5,
+      stagger: .25,
+      ease: "Power1.easeOut",
+      duration: 2.5,}, "op+=1.5");
+
+  if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches) {
+
+    tl.from("#index-projects .img-box", {
+      autoAlpha: 0,
+      width: 50,
+      ease: "power2.in",
+      duration: 2,}, "op+=1");
+    
+  } else {
+
+    tl.from("#index-projects .img-box", {
+      autoAlpha: 0,
+      ease: "power2.in",
+      duration: 2,}, "op+=1");
+
+    tl.from("header ul li", {
+      autoAlpha: 0,
+      y: 5,
+      filter: "blur(5px)",
+      stagger: .2,
+      ease: "power2.inOut",
+      duration: 2,}, "op+=1");
+  }
+
+      }
     },
     
     async asyncData({ $microcms }) {

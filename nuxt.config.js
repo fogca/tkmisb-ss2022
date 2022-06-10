@@ -39,10 +39,10 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/fav.ico' }
     ],
     script: [      
-      { src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js", ssr: false },
-      { src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js", ssr: false },
+      //{ src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js", ssr: false },
+      //{ src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js", ssr: false },
       { src: "https://webfont.fontplus.jp/accessor/script/fontplus.js?kqbwQX--jVA%3D&box=2bQkUFfZnEc%3D&aa=1&ab=2", ssr: false },
-      { src: "js/animation.js", ssr: false, body: true },
+      //{ src: "js/animation.js", ssr: false, body: true },
               
     ]
   },
@@ -68,6 +68,7 @@ export default {
   buildModules: [
     "nuxt-microcms-module",
     '@nuxtjs/date-fns',
+    'nuxt-gsap-module'
   ],
   microcms: {
     options: {
