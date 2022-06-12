@@ -110,7 +110,7 @@
         </div>
 
         <div class="container">
-          <h3 class="h5">メールでのお問い合わせはこちら</h3>
+          <h3 class="h5">Messangerでのお問い合わせはこちら</h3>
           <a href="https://www.messenger.com/t/100069870710731" target="blank_" class="mail h3" lang="en">Facebook Messanger</a>
         </div>
       </div>
