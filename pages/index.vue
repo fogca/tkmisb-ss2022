@@ -86,12 +86,12 @@
             まだ見ぬ飲食の体験を創り出します。
         </h4>
         <div class="container">
-          <img src="@/assets/image/sp_farmentation.jpg" alt="" class="sp">
-          <img src="@/assets/image/sp_aging.jpg" alt="" class="sp">
-          <img src="@/assets/image/sp_distillation.jpg" alt="" class="sp">
-          <img src="@/assets/image/pc_farmentation.jpg" alt="" class="pc">
-          <img src="@/assets/image/pc_aging.jpg" alt="" class="pc">
-          <img src="@/assets/image/pc_distillation.jpg" alt="" class="pc">
+          <img src="@/assets/image/sp_farmentation.webp" alt="" class="sp">
+          <img src="@/assets/image/sp_aging.webp" alt="" class="sp">
+          <img src="@/assets/image/sp_distillation.webp" alt="" class="sp">
+          <img src="@/assets/image/pc_farmentation.webp" alt="" class="pc">
+          <img src="@/assets/image/pc_aging.webp" alt="" class="pc">
+          <img src="@/assets/image/pc_distillation.webp" alt="" class="pc">
         </div>
       </div>
     </section>
