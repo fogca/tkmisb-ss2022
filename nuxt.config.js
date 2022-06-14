@@ -68,7 +68,8 @@ export default {
   buildModules: [
     "nuxt-microcms-module",
     '@nuxtjs/date-fns',
-    'nuxt-gsap-module'
+    'nuxt-gsap-module',
+    //'@aceforth/nuxt-optimized-images',
   ],
   microcms: {
     options: {
@@ -77,6 +78,7 @@ export default {
     },
     mode: process.env.NODE_ENV === "production" ? "server" : "all",
   },
+  
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
